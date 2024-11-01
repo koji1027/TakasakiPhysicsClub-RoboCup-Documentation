@@ -35,7 +35,7 @@
 	- 回路
 - ジャイロ
 	- 商品
-- メインマイコン
+- ~~メインマイコン~~
 	- Arduino純正/互換(AVR)
 	- Seeeduino XIAO
 		- SAMD
