@@ -20,8 +20,21 @@
               "icon": "lucide-file",
               "title": "ボールセンサ"
             }
+          },
+          {
+            "id": "3b48f63d8f12e1ad",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.7.5"
+              },
+              "icon": "lucide-file",
+              "title": "Release Notes 1.7.5"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -159,7 +172,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3fe8582fc592fea2",
+  "active": "3b48f63d8f12e1ad",
   "lastOpenFiles": [
     "Circuits/赤外線センサ1.png",
     "Circuits/モータードライバ.md",
