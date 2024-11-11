@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "949e49820d3e3fc9",
+        "id": "0def83ec1d279957",
         "type": "tabs",
         "children": [
           {
-            "id": "a0e49ac20e648685",
+            "id": "94bfc54d682b0ed3",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Circuits/キッカー.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "キッカー"
+              "title": "新規タブ"
             }
           }
         ]
@@ -159,12 +155,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a0e49ac20e648685",
+  "active": "94bfc54d682b0ed3",
   "lastOpenFiles": [
+    "Circuits/キッカー.md",
     "Circuits/CB1037.jpg",
     "Circuits/電子工作をするに当たって.md",
     "Circuits/モータードライバ.md",
-    "Circuits/キッカー.md",
     "Circuits/ラインセンサ.md",
     "Circuits/信号.md",
     "Circuits/通信.md",
@@ -180,7 +176,6 @@
     "Circuits/highsideswitch.jpg",
     "Circuits/スクリーンショット 2024-11-08 21.17.58.png",
     "Circuits/フォトカプラ.png",
-    "Circuits/スクリーンショット 2024-11-08 20.50.50.png",
     "Circuits/lowsideswitch.jpg.sb-3470f19e-x0wB8y",
     "Circuits/highsideswitch.jpg.sb-3470f19e-8tgzRA",
     "Circuits/HighsideSwitch.pdf",
