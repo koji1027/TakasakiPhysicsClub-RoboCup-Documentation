@@ -1,7 +1,3 @@
----
-dg-home: false
-dg-publish: true
----
 著者：根岸孝次
 
 めちゃめちゃ重要なIMU、ジャイロセンサについて解説します。

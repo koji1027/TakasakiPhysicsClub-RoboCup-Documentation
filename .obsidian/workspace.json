@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Test.md",
+                "file": "Circuits/Microcomputer.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Test"
+              "title": "Microcomputer"
             }
           }
         ]
@@ -160,22 +160,22 @@
       "digitalgarden:Digital Garden Publication Center": false
     }
   },
-  "active": "cab26d4b1373d76c",
+  "active": "1e75a487ac846204",
   "lastOpenFiles": [
-    "src/site/notes/Test.md",
-    "src/site/notes",
-    "src/site",
-    "src",
+    "Test.md",
     "Circuits/電子工作をするに当たって.md",
     "Circuits/通信.md",
     "Circuits/信号.md",
     "Circuits/ラインセンサ.md",
     "Circuits/モータードライバ.md",
-    "Circuits/マイコンボード.md",
+    "Circuits/Microcomputer.md",
     "Circuits/ボールセンサ.md",
     "Circuits/キッカー.md",
     "Circuits/IMU、ジャイロセンサ.md",
-    "Test.md",
+    "src/site/notes/Test.md",
+    "src/site/notes",
+    "src/site",
+    "src",
     "Circuits/CB1037.jpg",
     "Circuits/button_genjitsu.jpg",
     "Circuits/アイソレーター.png",
