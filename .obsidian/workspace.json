@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "19da73627ae90590",
+        "id": "018ef39936b2e762",
         "type": "tabs",
         "children": [
           {
-            "id": "8375e636dd45067b",
+            "id": "711fdd5cd83a84d2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -160,17 +160,17 @@
       "digitalgarden:Digital Garden Publication Center": false
     }
   },
-  "active": "8375e636dd45067b",
+  "active": "711fdd5cd83a84d2",
   "lastOpenFiles": [
-    "Circuits/ケーブル作り.md",
+    "Circuits/電子工作をするに当たって.md",
     "index.md",
+    "Circuits/ケーブル作り.md",
     "Circuits/IMU、ジャイロセンサ.md",
     "Circuits/Signal.md",
     "Circuits/通信.md",
     "Circuits/Microcomputer.md",
     "ToDO.md",
     "ただいま整備中.md",
-    "Circuits/電子工作をするに当たって.md",
     "Circuits/lowsideswitch.jpg",
     "_site/aaa.md/jekyll/update/2024/11/17/welcome-to-jekyll.html",
     "_site/aaa.md/jekyll/update/2024/11/17",
