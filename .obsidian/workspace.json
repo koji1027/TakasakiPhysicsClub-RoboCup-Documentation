@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Circuits/Microcomputer.md",
+                "file": "Circuits/電子工作をするに当たって.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Microcomputer"
+              "title": "電子工作をするに当たって"
             }
           }
         ]
@@ -160,15 +160,15 @@
       "digitalgarden:Digital Garden Publication Center": false
     }
   },
-  "active": "1e75a487ac846204",
+  "active": "cab26d4b1373d76c",
   "lastOpenFiles": [
+    "Circuits/Microcomputer.md",
     "Test.md",
     "Circuits/電子工作をするに当たって.md",
     "Circuits/通信.md",
     "Circuits/信号.md",
     "Circuits/ラインセンサ.md",
     "Circuits/モータードライバ.md",
-    "Circuits/Microcomputer.md",
     "Circuits/ボールセンサ.md",
     "Circuits/キッカー.md",
     "Circuits/IMU、ジャイロセンサ.md",
