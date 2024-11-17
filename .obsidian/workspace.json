@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6de0b8929104e3c4",
+        "id": "19da73627ae90590",
         "type": "tabs",
         "children": [
           {
-            "id": "a6386e838a0b3d39",
+            "id": "8375e636dd45067b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "index.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "新規タブ"
+              "title": "index"
             }
           }
         ]
@@ -156,12 +160,13 @@
       "digitalgarden:Digital Garden Publication Center": false
     }
   },
-  "active": "a6386e838a0b3d39",
+  "active": "8375e636dd45067b",
   "lastOpenFiles": [
-    "Circuits/通信.md",
+    "Circuits/ケーブル作り.md",
     "index.md",
-    "Circuits/デジタル信号とアナログ信号.md",
     "Circuits/IMU、ジャイロセンサ.md",
+    "Circuits/Signal.md",
+    "Circuits/通信.md",
     "Circuits/Microcomputer.md",
     "ToDO.md",
     "ただいま整備中.md",
@@ -203,7 +208,6 @@
     "Test.md",
     "test2.md",
     "README.md",
-    "Circuits/ラインセンサ.md",
     "無題のファイル.canvas"
   ]
 }

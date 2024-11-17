@@ -10,16 +10,16 @@
 - [加工・組み立て](ただいま整備中)
 
 ### 回路
-- [[デジタル信号とアナログ信号|デジタル信号とアナログ信号]]
-- [[Microcomputer | マイコン]]
-- [[Circuits/通信|通信]]
-- [[Circuits/ボールセンサ|ボールセンサ]]
-- [[Circuits/ラインセンサ|ラインセンサ]]
-- [[Circuits/モータードライバ|モータードライバ]]
-- [[Circuits/IMU、ジャイロセンサ|IMU、ジャイロセンサ]]
-- [[Circuits/ケーブルづくり|ケーブル作り]]
-- [[Circuits/電子工作をするに当たって|電子工作をするに当たって]]
-- [[Circuits/キッカー|キッカー]]
+- [デジタル信号とアナログ信号](Circuits/Signal)
+- [マイコン](Circuits/Microcomputer)
+- [通信](Circuits/通信)
+- [ボールセンサ](Circuits/ボールセンサ)
+- [ラインセンサ](Circuits/ラインセンサ)
+- [モータードライバ](Circuits/モータードライバ)
+- [IMUとジャイロセンサ](Circuits/IMU、ジャイロセンサ)
+- [ケーブル作り](Circuits/ケーブル作り)
+- [電子工作をするに当たって](Circuits/)
+- [キッカー](Circuits/きっかー)
 
 
 ### 制御
