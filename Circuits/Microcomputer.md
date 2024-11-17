@@ -1,6 +1,6 @@
 ---
 dg-home: false
-dg-publish: true
+dg-publish: false
 ---
 著者：根岸孝次
 
