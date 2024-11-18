@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "018ef39936b2e762",
+        "id": "b33d033b0b7a8f7e",
         "type": "tabs",
         "children": [
           {
-            "id": "711fdd5cd83a84d2",
+            "id": "ca1b7e0c1de7d186",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Circuits/ケーブル作り.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "ケーブル作り"
             }
           }
         ]
@@ -160,45 +160,45 @@
       "digitalgarden:Digital Garden Publication Center": false
     }
   },
-  "active": "711fdd5cd83a84d2",
+  "active": "ca1b7e0c1de7d186",
   "lastOpenFiles": [
+    "Circuits/ケーブル作り3.jpg",
+    "Circuits/ケーブル作り.md",
+    "Circuits/ケーブル作り2.jpg",
+    "Circuits/ケーブル作り1.jpg",
+    "Circuits/PXL_20241117_081507551.MP.jpg",
+    "Circuits/ケーブル作り6.jpg",
+    "Circuits/ケーブル作り5.jpg",
+    "Circuits/PXL_20241117_112606122.MP.jpg.sb-4a29d8bd-O0tBXu",
+    "Circuits/ケーブル作り4.jpg",
+    "Circuits/ケーブル作り1.jpg.sb-4a29d8bd-oSKUZW",
+    "Circuits/コンタクト3.jpg",
+    "Circuits/コンタク2.jpg",
+    "Circuits/コンタクト.jpg",
+    "Circuits/PXL_20241117_110835234.MP.jpg.sb-4a29d8bd-l1g2IV",
+    "Circuits/PXL_20241117_110801160.MP.jpg.sb-4a29d8bd-JgVo61",
+    "Circuits/PXL_20241117_081535717.MP.jpg.sb-4a29d8bd-CgVoZo",
     "Circuits/電子工作をするに当たって.md",
     "index.md",
-    "Circuits/ケーブル作り.md",
     "Circuits/IMU、ジャイロセンサ.md",
     "Circuits/Signal.md",
     "Circuits/通信.md",
     "Circuits/Microcomputer.md",
     "ToDO.md",
     "ただいま整備中.md",
-    "Circuits/lowsideswitch.jpg",
     "_site/aaa.md/jekyll/update/2024/11/17/welcome-to-jekyll.html",
     "_site/aaa.md/jekyll/update/2024/11/17",
     "_site/aaa.md/jekyll/update/2024/11",
     "_site/aaa.md/jekyll/update/2024",
-    "_site/assets/images/bg_hr.png",
-    "_site/assets/images/sprite_download.png",
-    "_site/assets/images/icon_download.png",
-    "_site/assets/images/blacktocat.png",
     "_site/assets/css/style.css.map",
-    "_site/assets/css/style.css",
-    "_site/aaa.md/jekyll/update",
-    "_site/Circuits/赤外線センサ1.png",
-    "_site/assets/images",
-    "_site/assets/css",
-    "_site/about/index.html",
     "_site/Circuits/電子工作をするに当たって.md",
     "_site/Circuits/通信.md",
     "_site/Circuits/信号.md",
     "_site/Circuits/ラインセンサ.md",
     "_site/Circuits/モータードライバ.md",
     "_site/Circuits/ボールセンサ.md",
-    "_site/Circuits/フォトカプラ.png",
     "_site/Circuits/ケーブルづくり.md",
     "_site/Circuits/キッカー.md",
-    "_site/Circuits/アイソレーター.png",
-    "_site/Circuits/ws2812b_2.png",
-    "_site/Circuits/ws2812b_1.jpg",
     "_site/Circuits/IMU、ジャイロセンサ.md",
     "_site/index.md",
     "_site/aaa.md",
@@ -207,7 +207,6 @@
     "aaa.md",
     "Test.md",
     "test2.md",
-    "README.md",
     "無題のファイル.canvas"
   ]
 }
