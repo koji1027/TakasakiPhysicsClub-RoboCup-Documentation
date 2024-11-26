@@ -4,26 +4,25 @@
 
 ## 資料一覧
 ### 機械
-- [設計のやり方](ただいま整備中)
-- [オムニホイール](ただいま整備中)
-- [全方位ミラー](ただいま整備中)
-- [加工・組み立て](ただいま整備中)
+- [設計のやり方](prepare_now.md)
+- [オムニホイール](prepare_now.md)
+- [全方位ミラー](prepare_now.md)
+- [加工・組み立て](prepare_now.md)
 
 ### 回路
-- [デジタル信号とアナログ信号](Circuits/Signal)
-- [マイコン](Circuits/Microcomputer)
-- [通信](Circuits/通信)
-- [ボールセンサ](Circuits/ボールセンサ)
-- [ラインセンサ](Circuits/ラインセンサ)
-- [モータードライバ](Circuits/モータードライバ)
-- [IMUとジャイロセンサ](Circuits/IMU、ジャイロセンサ)
-- [ケーブル作り](Circuits/ケーブル作り)
-- [電子工作をするに当たって](Circuits/電子工作をするに当たって)
-- [キッカー](Circuits/キッカー)
-
+- [電子工作をするに当たって](Circuits/before_developing.md)
+- [デジタル信号とアナログ信号](Circuits/signal.md)
+- [マイコンのすゝめ](Circuits/microcomputer.md)
+- [通信方式のすゝめ](Circuits/transmission.md)
+- [自作ケーブルのすゝめ](Circuits/make_cable.md)
+- [モータードライバ解説](Circuits/motor_driver.md)
+- [ボールセンサ解説](Circuits/ball_sensor.md)
+- [ラインセンサ解説](Circuits/line_sensor.md)
+- [IMU解説](Circuits/imu.md)
+- [キッカー解説](Circuits/kicker.md)
 
 ### 制御
-- [赤外線センサ](ただいま整備中)
-- [ラインセンサ](ただいま整備中)
-- [回り込み](ただいま整備中)
-- [カメラ処理](ただいま整備中)
+- [赤外線センサ](prepare_now.md)
+- [ラインセンサ](prepare_now.md)
+- [回り込み](prepare_now.md)
+- [カメラ処理](prepare_now.md)
