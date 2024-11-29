@@ -66,6 +66,7 @@ dg-publish: false
 ### 用途別
 #### センシング
 センサーからデータを収集して簡単な計算をし、UARTなどでデータを転送する程度の負荷の場合
+
 - Arduino 純正品/互換品
 - Seeeduino XIAO SAMD21
 	- Arduino 純正品/互換品 と似たマイコンを採用しており癖は少なめ
@@ -80,6 +81,7 @@ dg-publish: false
 
 #### 計算量が多い
 計算量が多い（特に浮動小数点）場合にはコアのクロックが高いモデルが必要になります。また、ロボットのメインマイコンのような複数のマイコンと通信してデータを集約して処理を行うような場合には通信インターフェースが強くなくてはなりません。
+
 - ESP32
 	- 通信インターフェースは弱め
 - STM32
@@ -93,6 +95,7 @@ dg-publish: false
 
 #### Wi-Fi、Bluetoothを使う
 Wi-FiやBluetoothを使えるデバイスは限られています。一概にBluetoothと言ってもBluetooth ClassicとBluetooth LEという2種類が存在します。後者は最近Arduino界に現れた曲者で使いづらいのでおすすめしません。小型なBluetooth対応マイコンは基本的にBluetooth LE対応なので注意が必要です。
+
 - ESP32
 	- 基本的には Bluetooth Classic 対応だが、一部モデルで Bluetooth LE 対応なので注意
 - Seeeduino XIAO ESP32
@@ -104,6 +107,7 @@ Wi-FiやBluetoothを使えるデバイスは限られています。一概にBlu
 
 #### カメラを使う
 カメラが利用できるマイコンは限られています。
+
 - ESP32
 	- 一部モデルでカメラを扱える
 	- 撮影した画像を利用して高度な処理をすることはできない
