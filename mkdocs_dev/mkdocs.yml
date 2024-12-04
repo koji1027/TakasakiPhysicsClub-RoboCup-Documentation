@@ -1,0 +1,28 @@
+site_name: ハードウェア開発 虎の巻
+nav:
+  - Home: index.md
+  - License: license.md
+  - Mechanics:
+    - 準備中: prepare_now.md
+  - Circuits:
+    - 電子工作を始める前に: Circuits/before_developing.md
+    - デジタル信号とアナログ信号: Circuits/signal.md
+    - マイコンのすゝめ: Circuits/microcomputer.md
+    - 通信方式: Circuits/transmission.md
+    - モータードライバ: Circuits/motor_driver.md
+    - ボールセンサ: Circuits/ball_sensor.md
+    - ラインセンサ: Circuits/line_sensor.md
+    - IMU（ジャイロセンサなど）: Circuits/imu.md
+    - キッカー: Circuits/kicker.md
+    - ケーブル作成: Circuits/make_cable.md
+  - Controls:
+    - 準備中: prepare_now.md
+
+extra_javascript: 
+  - js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
