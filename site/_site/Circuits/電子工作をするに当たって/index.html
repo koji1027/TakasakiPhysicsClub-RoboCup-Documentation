@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>電子工作をするに当たって - ハードウェア開発 虎の巻</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">ハードウェア開発 虎の巻</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../license/" class="nav-link">License</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Mechanics</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../prepare_now/" class="dropdown-item">準備中</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Circuits</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Circuits/before_developing/" class="dropdown-item">電子工作を始める前に</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/signal/" class="dropdown-item">デジタル信号とアナログ信号</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/microcomputer/" class="dropdown-item">マイコンのすゝめ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/transmission/" class="dropdown-item">通信方式</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/motor_driver/" class="dropdown-item">モータードライバ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/ball_sensor/" class="dropdown-item">ボールセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/line_sensor/" class="dropdown-item">ラインセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/imu/" class="dropdown-item">IMU（ジャイロセンサなど）</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/kicker/" class="dropdown-item">キッカー</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/make_cable/" class="dropdown-item">ケーブル作成</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Program Intro</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Program-intro/about_c/" class="dropdown-item">C言語という言語について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/hello_world/" class="dropdown-item">Hello World!</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/variables_type/" class="dropdown-item">変数の宣言と型</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/operator/" class="dropdown-item">演算子について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/function/" class="dropdown-item">関数について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/array/" class="dropdown-item">配列について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/structure/" class="dropdown-item">構造体について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/pointer/" class="dropdown-item">ポインタについて</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/dynamic_memory/" class="dropdown-item">動的メモリ確保について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/library/" class="dropdown-item">ライブラリの読み込みについて</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/bit_operator/" class="dropdown-item">ビット演算について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/object_programing/" class="dropdown-item">オブジェクト指向概説</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/inheritance/" class="dropdown-item">継承について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/composition/" class="dropdown-item">時代は継承より合成</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">道具</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">ショップ</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">基板発注</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">安全面</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>著者：根岸孝次</p>
+<p>電子工作をするに当たって知っておくべき知識などをまとめておきます。</p>
+<h2 id="_1">道具</h2>
+<p>電子工作で使うであろう部品を軽く解説します。ケーブルを作るために必要な工具については別途解説を作る予定です。</p>
+<ul>
+<li>ニッパー<ul>
+<li>ハサミみたいなもの</li>
+<li>銅線、部品の足などを切断する時に使用します</li>
+<li>物理部にあるニッパーは結構太いやつですが、写真のような細いやつもあります</li>
+<li>細いニッパーの方が使いやすいです</li>
+</ul>
+</li>
+<li>ワイヤーストリッパー<ul>
+<li>銅線の被覆をむく道具です</li>
+<li>被覆をむく銅線の太さ（AWG）に応じてどの穴を使うかは適切に選んでください<ul>
+<li>適切な穴より小さい穴で剥いてしまうと銅線の一部も一緒に剥かれてしまうのでやめましょう</li>
+</ul>
+</li>
+<li>内側に配線を切断するための刃もついています</li>
+</ul>
+</li>
+<li>ラジオペンチ<ul>
+<li>ものつまんだり、曲げたりできます</li>
+</ul>
+</li>
+<li>圧着ペンチ<ul>
+<li>銅線をコネクタのコンタクトに圧着するための道具</li>
+<li>詳しくはケーブ作りの資料を見てください</li>
+</ul>
+</li>
+<li>ピンセット<ul>
+<li>小さ部品をつまむための道具<ul>
+<li>チップ抵抗・コンデンサとか表面実装部品</li>
+</ul>
+</li>
+<li>自作基板を作らないなら必要ないと思う<ul>
+<li>自作基板のレベルが高くなってくると結構大事になってくる</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>はんだごて<ul>
+<li>言うまでも無い気がする</li>
+<li>物理部にあるハンダステーション（青いやつ）は高性能なので使い倒しましょう<ul>
+<li>僕が卒業する頃ぐらいからコテ先が死んでいた気がするので交換したほうが良いと思う</li>
+<li>400℃とかで使用するやつがたまにいて、そういうことをするとコテ先が痛むのでやめましょう</li>
+<li>普通の基板だったら300℃くらいで十分</li>
+</ul>
+</li>
+<li>個人的にはUSBはんだごてを最近推している<ul>
+<li><a href="https://akizukidenshi.com/catalog/g/g129452/">これ</a>を買ったがとても良かったのでおすすめしておく</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>フラックス<ul>
+<li>はんだ付けしやすいように塗る液体</li>
+<li>はんだにフラックスが事前に入っていることも多い</li>
+<li>これを基板に塗るとめちゃめちゃはんだ付けしやすい<ul>
+<li>基板が汚れるのでエタノールなどで後で拭き取る</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ハンダ吸い取り線<ul>
+<li>盛りすぎたハンダなどを吸い取ってくれる</li>
+<li>当たり前だが大事</li>
+</ul>
+</li>
+<li>卓上リフロー<ul>
+<li>ホットプレートみたいなもの</li>
+<li>比較的小さな面積のプレートを400℃ぐらいまで加熱できる</li>
+<li>表面実装部品を自分ではんだ付けできる</li>
+<li>私は<a href="https://akizukidenshi.com/catalog/g/g129534/">これ</a>を持っています<ul>
+<li>USBで駆動できるので便利</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>テスター<ul>
+<li>電圧、電流、抵抗値などを計測できる</li>
+<li>必需品</li>
+<li>持ち運びやすい小さいものを選ぶと良い</li>
+<li>そこまでこだわらなくてもあれば問題ない</li>
+</ul>
+</li>
+<li>オシロスコープ<ul>
+<li>めちゃめちゃ便利</li>
+<li>そこそこ高価なので壊さないように</li>
+<li>電圧だけでなく波形も見れるのでPWM信号とか通信線の波形を確認できる</li>
+<li>これを使うレベルになってくればこの資料もいらない気がしている</li>
+<li>私は<a href="https://akizukidenshi.com/catalog/g/g116701/">これ</a>を使用しています<ul>
+<li>USBで充電できて持ち運びもできるので良い</li>
+<li>テスターとしての機能もある</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>ドライバーセット<ul>
+<li>ドライバーの先端を色々なビットに変更できるやつ</li>
+<li>1つあれば基本的なネジ全てに対応できるので神</li>
+<li>+ねじ、-ねじ、トルクスネジ、六角ボルトを回せればいいと思う<ul>
+<li>+ネジはネジ山が潰れるのでカス</li>
+<li>個人的に六角が一番良い</li>
+<li>極抵当ネジでトルクスネジがよくあるのでトルクスネジも回せると良い</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>電源装置<ul>
+<li>任意の電圧、電流を出力できる装置</li>
+<li>充電の手間が無いのでロボットを走らせる必要がないときにはこっちのほうが良い</li>
+<li>自作基板の場合、安全性が確かめられるまではLi-Poをつないではいけない<ul>
+<li>電源装置をつなげるかニッケル水素電池あたりをつなぐ</li>
+</ul>
+</li>
+<li>私は<a href="https://akizukidenshi.com/catalog/g/g118306/">これ</a>を愛用しています<ul>
+<li>USBで動かせるので良い</li>
+<li>5Aまでしか出力できないのでモーターとかつなげるときには注意が必要</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">ショップ</h2>
+<p>電子部品などを取り扱っているお店を紹介します。</p>
+<ul>
+<li><a href="https://akizukidenshi.com/catalog/default.aspx">秋月電子通商</a><ul>
+<li>秋葉原にある</li>
+<li>大御所</li>
+<li>通販もやっている</li>
+<li>まずここで探すのが無難</li>
+<li>配送が少し遅い</li>
+</ul>
+</li>
+<li><a href="https://www.marutsu.co.jp/">マルツ</a><ul>
+<li>Digikeyの正規代理店なのでDigikeyで取り扱っている部品を変える。Digikeyで少量だけ部品を買いたい時、送料が高すぎるのでマルツ経由で買うと安く済む。配送が少し遅い。</li>
+<li>Digikeyの代理店以外の良さが無い気がする</li>
+</ul>
+</li>
+<li><a href="https://www.sengoku.co.jp/">千石電商</a><ul>
+<li>Molexコネクタを扱っている<ul>
+<li>安くない</li>
+</ul>
+</li>
+<li>秋葉原にある</li>
+</ul>
+</li>
+<li><a href="https://www.amazon.co.jp/">Amazon.co.jp</a><ul>
+<li>ラインナップが多いのは言うまでもない</li>
+<li>中華の信頼性が低いモジュールや部品があるのであまりおすすめできない</li>
+</ul>
+</li>
+<li><a href="https://www.switch-science.com/">スイッチサイエンス</a><ul>
+<li>色々なモジュールを扱っていて良い<ul>
+<li>M5StackやPololuとか</li>
+</ul>
+</li>
+<li>モジュール買うならここで調べてみるのはあり</li>
+</ul>
+</li>
+<li><a href="https://www.aitendo.com/">Aitendo</a><ul>
+<li>使ったことないので知りません</li>
+</ul>
+</li>
+<li><a href="https://www.digikey.jp/">Digikey</a><ul>
+<li>世界最大級の部品販売会社🇺🇸</li>
+<li>送料が高い（当時¥6000ぐらい）<ul>
+<li>¥6000ぐらい購入すると送料が無料になるので結局送料は問題にならない</li>
+<li>配送業者はUPSが良い。3日ぐらいで届く。</li>
+</ul>
+</li>
+<li>ラインナップが神<ul>
+<li>なんでもある</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://www.mouser.jp/">MOUSER</a><ul>
+<li>Digikeyと似ている</li>
+<li>Digikeyの方が単価が安いことが多かった気がする</li>
+<li>わざわざこっちを使う理由が思いつかない</li>
+</ul>
+</li>
+<li><a href="https://jp.rs-online.com/web/">RSコンポーネント</a><ul>
+<li>Digikeyと同じ系統</li>
+<li>わざわざ使う理由ない</li>
+</ul>
+</li>
+<li><a href="https://www.lcsc.com/">LCSC</a><ul>
+<li>中国の部品販売会社<ul>
+<li>中国と言っても扱っている部品は正規品</li>
+</ul>
+</li>
+<li>単価が激安<ul>
+<li>素晴らしい</li>
+</ul>
+</li>
+<li>送料は¥3000ぐらいかかるので注意<ul>
+<li>日数も注意</li>
+</ul>
+</li>
+<li>ラインナップはかなり良い<ul>
+<li>Digikeyほどではない気がする</li>
+<li>中国メーカーの部品の取り扱いがある</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="https://ja.aliexpress.com/?gatewayAdapt=glo2jpn">Aliexpress</a><ul>
+<li>Amazonを更に怪しくした漢字</li>
+<li>コネクタや抵抗、モジュールが安い<ul>
+<li>コネクタは激安なのでありかもしれない</li>
+<li>抵抗等はやめたほうが良いかも</li>
+<li>STMマイコン関連のモジュールなどが安い<ul>
+<li><a href="https://ja.aliexpress.com/item/3256804213481525.html?algo_pvid=badcb106-e43f-4ceb-a85e-d926414b21d2&amp;algo_exp_id=badcb106-e43f-4ceb-a85e-d926414b21d2-0&amp;pdp_npi=4@dis!USD!2.35!2.35!!!16.76!16.76!@2102f0cc17310717999205539e1b7a!12000037047098773!sea!US!3683584924!X&amp;curPageLogUid=4iU8eCC9XemG&amp;utparam-url=scene:search%7Cquery_from:">STMマイコン用の書き込み機</a></li>
+<li><a href="https://ja.aliexpress.com/item/3256801269871873.html?algo_pvid=a8d1be6f-c446-4f88-8324-49b0c3f887fc&amp;algo_exp_id=a8d1be6f-c446-4f88-8324-49b0c3f887fc-0&amp;pdp_npi=4@dis!USD!3.78!3.78!!!26.89!26.89!@2141001d17310718485273166edf81!12000034304092617!sea!US!3683584924!X&amp;curPageLogUid=K09wU0ay7mYL&amp;utparam-url=scene:search%7Cquery_from:">STM32F4搭載マイコン</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>個人的に利用する順番も載せておきます。
+1. 秋月電子
+    - 一番便利なのでここで都合の部品がないか探す
+    - あればここで買うことが多いが単価が高い時には海外のショップを使うこともある
+2. LCSC
+    - 単価が安くラインナップ豊富なのでここで売っていると嬉しい
+    - JLCPCBで部品実装もできるのでここで取り扱っている部品で設計するとはんだ付けもしてもらえたりする
+3. Digikeyとマルツ
+    - 最後の砦
+    - ここでなければ諦めることが多々ある
+    - 買う量などに応じてDigikeyとマルツを使い分ける
+4. その他
+    - 1~3のショップに該当しないような商品はその時々適切なショップを選ぼう</p>
+<h2 id="_3">基板発注</h2>
+<p>個人的に<strong>JLCPCB</strong>委託だと思っています。</p>
+<ul>
+<li>プリント基板製造<ul>
+<li>基板の色や厚みを色々と選べる</li>
+<li>2,3日で製造してくれる</li>
+<li>やすい</li>
+</ul>
+</li>
+<li>PCBA<ul>
+<li>基板製造に加えてはんだ付けもしてくれる</li>
+<li>LCSCにある大半の部品をはんだ付けしてもらえる</li>
+</ul>
+</li>
+<li>3Dプリンティング<ul>
+<li>色々な樹脂や色々な方式で印刷してくれるらしい</li>
+<li>このサービスを使ったことと無いのでわからない</li>
+</ul>
+</li>
+<li>CNC<ul>
+<li>アルミの板を削り出して任意の部品を作ってくれる</li>
+<li>高高にはCNCが無いと思うので使ってみるのはありだと思う</li>
+<li>このサービスを使ったことが無いのでわからない</li>
+<li>自分でCNCを使うと結構面倒なので委託できるのは良さそう</li>
+</ul>
+</li>
+</ul>
+<p>PCBAの詳しいやり方は<a href="https://zenn.dev/negi_robo/articles/c19f75619e3593">ここ</a>で解説したのでぜひ読んでください。</p>
+<h2 id="_4">安全面</h2>
+<p>電子工作をするに当たって、危険なことは<strong>発煙・発火</strong>です。（やけどとかは自己責任）物理部で火事を起こしたら部活が消えてなくなるかもしれないので注意しましょう。また、大会中に発煙したら原則一発アウトなので避けたいところです。</p>
+<h3 id="_5">発煙・発火の原因</h3>
+<p>まずは、発煙・発火までのプロセスを考えましょう。</p>
+<p>1.　大電流が流れる
+    - 1A以上だったら十分大電流
+    - 流れる電流の最大値に注意する
+    - ロジック部だったら1A程度でも発煙・発火
+    - パワー部だったらものによりけりだが、5A,10A程度を目安に
+1. 部品・配線が発熱
+    - 電気的なロスは<span class="arithmatex">\(RI^2\)</span>ですので、大電流が流れると恐ろしいほど発熱します
+    - 手でさわれないこともザラにあります
+        - 安易に部品を触らない
+2. 発煙・発火
+    - あまりにも部品が発熱することで部品が燃焼する</p>
+<p>発煙・発火を起こさないためには1,2で対策する必要がありますね。</p>
+<h4 id="_6">大電流に対する対処</h4>
+<p>大電流が流れることが直接的な原因であるので、まずはこれに対処するのが順当です。</p>
+<p>大電流が流れると言っても、2つに分類できます。「定常的に大電流が流れる場合」、「意図せず大電流が流れる場合」</p>
+<p>定常的に大電流が流れる場合の対処は楽です。モータードライバなどが該当します。主な対処は以下のとおりです。
+- 許容電流値の大きい部品を使う
+    - そもそも許容電流を越えてはだめ
+    - MOSFET、ダイオード、IC、コネクタ、抵抗（※）
+    - 各製品の用途欄を参考にすると良いこともある
+- 用途にあった配線やコネクタを用いる
+    - 太い配線ほど許容電流が大きい
+    - 細い配線は数A流すと<strong>フニャフニャになったり溶ける</strong>
+    - 一見が太くても中の銅線は細い粗悪品も多々ある
+        - 銅線の断面積が重要
+    - コネクタにも許容電流がある
+        - XHコネクタは3Aまでだが、5Aとか流しても耐えることがわかっている
+        - よく使うジャンパ線は1Aぐらいまで
+            - 普通に溶けるぞ（経験者はかたる）
+        - <strong>物理部にある黒い細い線でモーターを回しているのを目撃したが言語道断</strong>
+            - 電子工作の基礎がなっておらん
+            - Li-Poのケーブルの太さを見てみろ
+- （補足）基板の配線の許容電流の上げ方
+    - 配線幅を太くする
+        - 私の場合、デジタル信号は0.1524mm、アナログ信号は0.254mmだが、パワー電源の配線は0.5mm ~ 2.54mmぐらい。これでも足りない場合にはベタ配線を使う。
+        - レジスト（基板の銅箔の上の緑色の部分）を剥がして銅箔の上にハンダを盛る
+            - ハンダで無理やり配線を太くして電流許容量を増やす
+        - 基板の銅箔を厚くする
+            - デフォルトでは35μm
+            - 70μmなどがあった気がするがめちゃめちゃ高い
+            - おすすめしない</p>
+<p>次に、意図せず大電流が流れてしまう場合の対処について考えていきます。主な対処法は以下のとおりです。
+- ヒューズ
+    - 許容電流が流れると熱で配線が溶けて遮断するもの
+        - 物理的に遮断する装置なので確実
+        - 大電流が流れると自動的に遮断してくれる点が良い
+            - ぶっちゃけ人間はすぐに対応できない
+    - ガラス管ヒューズはよく見るのでは？
+        - ロボカップではブレードヒューズを使うことが多い
+        - 性能が違うので用途に応じて選びましょう
+    - 許容電流と<strong>電流遮断時間</strong>を確認する必要がある
+        - 例えば、20A流れたら切れてくれるヒューズがあったとして、そのヒューズが20Aで2秒流れたら熱で遮断されるものだった場合、意味ないよねというお話。
+    - ロボカップサッカーでは必須
+- 保護回路
+    - 常に電流を監視し、しきい値を越えたら遮断する
+    - ヒューズより信頼度は低い
+    - 使ったこと無い</p>
+<p>以上のことは発煙・発火を防止するための防止策の一部に過ぎません。自分なりにどういった状況で発煙・発火が起こるのか、どうしたらそういうような状況が怒らずに済むのか、起こってしまった場合にどのように対処するのか考えてみてください。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../js/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

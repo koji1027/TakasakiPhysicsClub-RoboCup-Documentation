@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>信号 - ハードウェア開発 虎の巻</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">ハードウェア開発 虎の巻</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../license/" class="nav-link">License</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Mechanics</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../prepare_now/" class="dropdown-item">準備中</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Circuits</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Circuits/before_developing/" class="dropdown-item">電子工作を始める前に</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/signal/" class="dropdown-item">デジタル信号とアナログ信号</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/microcomputer/" class="dropdown-item">マイコンのすゝめ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/transmission/" class="dropdown-item">通信方式</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/motor_driver/" class="dropdown-item">モータードライバ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/ball_sensor/" class="dropdown-item">ボールセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/line_sensor/" class="dropdown-item">ラインセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/imu/" class="dropdown-item">IMU（ジャイロセンサなど）</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/kicker/" class="dropdown-item">キッカー</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/make_cable/" class="dropdown-item">ケーブル作成</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Program Intro</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Program-intro/about_c/" class="dropdown-item">C言語という言語について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/hello_world/" class="dropdown-item">Hello World!</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/variables_type/" class="dropdown-item">変数の宣言と型</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/operator/" class="dropdown-item">演算子について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/function/" class="dropdown-item">関数について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/array/" class="dropdown-item">配列について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/structure/" class="dropdown-item">構造体について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/pointer/" class="dropdown-item">ポインタについて</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/dynamic_memory/" class="dropdown-item">動的メモリ確保について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/library/" class="dropdown-item">ライブラリの読み込みについて</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/bit_operator/" class="dropdown-item">ビット演算について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/object_programing/" class="dropdown-item">オブジェクト指向概説</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/inheritance/" class="dropdown-item">継承について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/composition/" class="dropdown-item">時代は継承より合成</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">デジタル信号</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">アナログ信号</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>著者：根岸孝次</p>
+<p>Arduinoにはたくさんのピンがあります。センサやアクチュエータ（モーターなど）を動かす際に、ジャンパー線を使って配線をしたと思います。この資料では、Arduinoが線を介してセンサやアクチュエータとやり取りしてい信号線について解説します</p>
+<h2 id="_1">デジタル信号</h2>
+<p>Arduinoであれば、HIGHとLOWで表現される2値の信号です。（一般的には0,1で表現します。）<strong>グラウンドから見て</strong>対象のピンので電圧が一定以上であればHIGH(1)、一定以下であればLOW(0)となります。HIGHが何Vかはマイコンの動作電圧に依存します。</p>
+<table>
+<thead>
+<tr>
+<th>動作電圧</th>
+<th style="text-align: right;">LOW電圧</th>
+<th>HIGH電圧</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3.3V</td>
+<td style="text-align: right;">0V</td>
+<td><strong>3.3V</strong></td>
+</tr>
+<tr>
+<td>5V</td>
+<td style="text-align: right;">0V</td>
+<td><strong>5.0V</strong></td>
+</tr>
+<tr>
+<td>マイコンの動作電圧によってHIGH電圧が異なるので、もし<strong>動作電圧が異なるマイコン同士で通信する際には、電圧変換（レベル変換）する必要があります。</strong> 3.3Vマイコンから5Vマイコンへの通信は問題なくできますが、5Vマイコンから3.3Vマイコンへ通信を行うと3.3Vマイコン側の許容電圧を越えて故障する可能性があるためです。マイコンによっては、動作電圧は3.3Vだけれども5V信号を入力しても良いピンが存在します。<strong>5Vトレラント</strong>と呼びます。</td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>物理部にある主要なマイコンについても記しておきます。保証はしません。
+- 動作電圧5V
+    - Arduino Uno Rev
+    - Arduino Micro
+    - Arduino Mini Pro
+    - Arduino Mega
+    - Arduino Mega Pro
+- 動作電圧3.3V
+    - M5Stack
+    - OpenMV
+    - Seeeduino XIAO 無印
+    - Seeeduino XIAO RP2040/RP2350
+    - Seeeduino XIAO ESP32
+    - ESP32
+    - Teensy 4.0/4.1
+    - STM32 (多くのピンが5Vトレラント)</p>
+<h3 id="digitalwrite">digitalWrite</h3>
+<p>デジタル出力について解説していきます。要はArduinoピンから1を出力することです。センサに情報を送ったり、LEDに電源を供給してあげるために利用します。（Arduinoピンからは最大でも100mA程度しか供給できないので、アクチュエータを動かしてはいけません。壊れます。）</p>
+<p>Arduinoではデジタル出力のためにdigitalWrite関数が用意されています。2つの引数を取ります。返り値はありません。1つ目がピン番号(D2, A1など)で2つ目が状態(HIGH or LOW)です。非常にシンプルです。どのピンがどのピン番号に対応しているかはボードに刻印されていたりネットに記してあるのでそれを参照してください。ArduinoではデフォルトではLOWになっています。</p>
+<p>練習としてLチカ（LEDをチカチカと点滅させること）をやってみてください。</p>
+<h3 id="digitalread">digitalRead</h3>
+<p>先ほどデジタル出力を学んだので、次は入力について学んでいきます。他のマイコンやセンサからのデジタル信号の状態を読み取るために使用します。</p>
+<p>Arduinoではデジタル入力のためにdigitalRead関数が用意されています。1つの引数、ピン番号を取ります。返り値としてピンの状態を返します。読み取ったピンの状態がLOWであれば0、HIGHであれば1を返します。</p>
+<p>練習としてボタンが押されたかどうか確認するプログラム（補足を参照すると良い）をやボタンが押されたらLEDが光るプログラムを作ってみると良いと思います。</p>
+<h4 id="_2">補足 プルアップ・プルダウン抵抗について</h4>
+<p>先程のdigitalReadの中で、ボタンを使ってみると良いと述べましたが、1つ注意点があります。注意点と言いながら回路を作っていくうえで非常に重要な事項です。</p>
+<p>先ほどからHIGH、LOWと述べていますが、HIGH、LOWの基準はもちろん電圧の高低によります。ここで、電圧というものを考えてみる必要があります。ある点aの電圧Vaを計測するには電圧の基準点が必要となります。各点には電位があり、その差を普段電圧として呼んでいます。回路を扱う上で電圧を利用する際には、常に<strong>基準点がどこにあるか</strong>を意識する必要があります。一般的に、基準点の言及がない場合にはグランドが基準となります。だからこそ、回路を作るうえで<strong>すべてのグランドを繋いであげることが重要</strong>になります。例えば、回路図上に点a,bがあったとします。この時、点aの電圧として、Va(グランドから見たaの電圧),Vab(bから見たaの電圧)が考えられます。基本的にはVa≠Vabとなります。</p>
+<p>結構大事なことを書いたと書いた本人も今思っているところですが、残念ながらこれはあくまでも前置きです。このことを理解した上でボタンとArduinoをつなぐ回路を考えていきます。</p>
+<p>ボタンの仕組みから確認しましょう。基本的にボタンは4つのピンで構成されていて、内部的に2つのピンが接続されています。つまり、実質は2つのピンしかないということになります。ボタンを押していない状態ではこの2つのピンは接続されていません。ボタンを押すとこの2つのピンが接続された状態になります。単純ですね。ボタンを押した時にピンがグランドと接続されてLOWになる接続方法とピンが3.3Vと接続されてHIGHになる接続方法の2種類があります。両方扱うとつかれて死んでしまうので前者を扱うことにします。</p>
+<p>ボタンを押したらLOW、押していないときはHIGHとなればいいわけです。おそらく皆さんが考える回路はこんな感じなんではないでしょうか？
+<img alt="img" src="../button_risou.jpg" />
+残念ながらみなさんが想定しているようには動作してくれません。正確に言えば動作するときもあれば動作しないときもあるでしょう。実際には以下のように回路を作って上げる必要があります。
+![[button_genjitsu.jpg|377]]
+2つの違いは、Arduinoのピンと電源の間に抵抗が入っている点です。回路図をみるとピンを上に引っ張っているように見えます。これを<strong>プルアップ抵抗</strong>と呼びます。なぜこれが必要になるかと言うと、前者の場合、ボタンを押していない状態ではピンがどこにも接続されていません。この状態でdigitalReadを行うと、Arduinoはピンの電圧を測ろうとしても測る対象がないので測ることができません。（正確に言うとピンがどこにも接続されていない浮いている状態であるのでピンの電位が決まらず電圧が求まらないということです。）したがって、ボタンを押している状態がHIGHになるとは限らないのです。そこで、抵抗を挟んで電源と繋いであげて無理やりHIGHの状態にしてあげます。ボタンを押せば、ピンとグラウンドがショートするので当然LOWになります。ピンをグラウンド側と抵抗を介して接続してあげることを<strong>プルダウン抵抗</strong>と呼びます。ボタンを押した時にHIGHになってほしい時にはプルダウン抵抗を用います。一般的に、10k~100kΩを利用します。</p>
+<p>わざわざ抵抗を挟むのは実は面倒だったりします。抵抗を入れ忘れた状態で発注してしまったりすることも多々あります。でも大丈夫です。一般的なマイコンには内部的にプルアップ抵抗が用意されています。pinMode関数を利用してそれらを利用したり利用しなかったり選択することができます。pinMode関数は2つの引数を取ります。1つ目にピン番号、2つ目にピンの設定を与えます。ピンの設定の例を以下の表に示しておきます。</p>
+<table>
+<thead>
+<tr>
+<th>設定</th>
+<th>説明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OUTPUT</td>
+<td>出力モード、digitalWriteを利用するピンの場合に使う</td>
+</tr>
+<tr>
+<td>INPUT</td>
+<td>入力モード、digitalReadを利用するピンの場合に使う</td>
+</tr>
+<tr>
+<td>INPUT_PULLUP</td>
+<td>INPUTと基本的には同じ、内部的にプルアップされる</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_3">アナログ信号</h2>
+<p>次にアナログ信号を扱っていきましょう。世の中デジタルな社会ですが全部デジタルだと困るので、アナログ信号も扱います。</p>
+<h3 id="_4">アナログ入力</h3>
+<p>アナログ入力では、ピンに入力されている電圧を測定することができます。Arduinoでは、analogRead関数を利用します。引数は1つでピン番号を与えます。返り値として読み取った電圧を0~1023に変換した値を返します。0~1023の1024(10bit)段階に分割されているので正確にはアナログではありませんが真のアナログ入力を扱うことはできないので諦めましょう。デジタルのときと同様にマイコンの動作電圧によって、1023が5Vに対応するのか3.3Vに対応するのかが変わってくるので各自確認してください。</p>
+<p>一部のマイコンでは10bitよりも更に細かく分割することもできます。STM32やSeeeduno XIAO系はその代表例です。setup()関数内で、analogReadResolution関数を利用すると細かさを変えることができます。引数は1つで、ビット数を指定します。何もしないと10bitが指定されますが、これらのマイコンは12bitでのアナログ入力にも対応しています。</p>
+<p>アナログ入力を測定するためにADC(Analog Digital Converter)というハードウェアを利用しています。暇な時に調べてみると良いかもしれません。</p>
+<h3 id="_5">アナログ出力</h3>
+<p>アナログ入力が真のアナログ入力ではないように、アナログ出力も実は、デジタル信号を擬似的にアナログにしているだけです。そこで、使う信号がPWM信号というものです。PWM信号では、一定時間内で、HIGHになっている時間の割合、<strong>Duty比</strong>を変化させることで擬似的にアナログな電圧を生成します。例えば、マイコンの電源電圧が3.3Vで、Duty比が50%であれば1.65V、80%であれば2.64Vとなります。実際には、Duty比は0~100%で指定するのではなく、0~255(8bit)でしています。アナログ入力と同様で性能の高いマイコンでは、更に高分解能な設定も可能です。</p>
+<p>一定時間内が細かいほうがよりアナログに近い波形を得ることができます。（若干嘘だけど許して。）そこで、PWM信号を生成するに当たってはDuty比に加えて、周波数が重要になってきます。 例えば、ArduinoのPWM信号はデフォルトで490/980Hzとなっています。</p>
+<p>実際にPWM信号を出力するには、analogWrite関数を利用します。引数は2つあり、1つ目の引数にピン番号(※1)を、2つ目の引数にDuty比を0~255で表したものを与えます。Duty比の分解能を変更するには、analogWriteResolution関数を利用します。引数は1つで、Duty比の分解能のビット数を指定します。また、analogWriteFrequency関数を利用して、PWM信号の周波数を変更できます。引数は1つで、設定したい周波数を与えます。(※2)</p>
+<p>また、真のアナログ信号を出力するハードウェアとしてDAC(Digital Analog Converter)というものがあります。ロボカップで使うことは少ないので割愛しますが、気になる人は調べたり聞いてみてください。</p>
+<pre><code>※1: PWM信号を出力することが可能なピンは限られているので、使用するボード事に調べる必要があります。
+※2: PWM信号の分解能(Duty比のビット数)と周波数はトレードオフの関係にあります。設定できる上限値はマイコンの性能にかなり左右されるので、素人がいじるには少しむずかしいかもしれません。いじる場合には、それらが可能な組み合わせなのかしっかりと調べる必要があります。詳しく知りたかったら聞いて下さい。
+</code></pre></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../js/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

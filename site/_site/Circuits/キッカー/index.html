@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>キッカー - ハードウェア開発 虎の巻</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">ハードウェア開発 虎の巻</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../license/" class="nav-link">License</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Mechanics</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../prepare_now/" class="dropdown-item">準備中</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Circuits</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Circuits/before_developing/" class="dropdown-item">電子工作を始める前に</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/signal/" class="dropdown-item">デジタル信号とアナログ信号</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/microcomputer/" class="dropdown-item">マイコンのすゝめ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/transmission/" class="dropdown-item">通信方式</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/motor_driver/" class="dropdown-item">モータードライバ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/ball_sensor/" class="dropdown-item">ボールセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/line_sensor/" class="dropdown-item">ラインセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/imu/" class="dropdown-item">IMU（ジャイロセンサなど）</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/kicker/" class="dropdown-item">キッカー</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/make_cable/" class="dropdown-item">ケーブル作成</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Program Intro</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Program-intro/about_c/" class="dropdown-item">C言語という言語について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/hello_world/" class="dropdown-item">Hello World!</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/variables_type/" class="dropdown-item">変数の宣言と型</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/operator/" class="dropdown-item">演算子について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/function/" class="dropdown-item">関数について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/array/" class="dropdown-item">配列について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/structure/" class="dropdown-item">構造体について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/pointer/" class="dropdown-item">ポインタについて</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/dynamic_memory/" class="dropdown-item">動的メモリ確保について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/library/" class="dropdown-item">ライブラリの読み込みについて</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/bit_operator/" class="dropdown-item">ビット演算について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/object_programing/" class="dropdown-item">オブジェクト指向概説</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/inheritance/" class="dropdown-item">継承について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/composition/" class="dropdown-item">時代は継承より合成</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">ソレノイド</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link">構造・原理</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">キック回路</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>著者：根岸 孝次</p>
+<h2 id="_1">ソレノイド</h2>
+<h3 id="_2">概要</h3>
+<p>キッカーではソレノイドを使用します。ソレノイドとは電気エネルギーを運動エネルギーに変換するアクチュエータの一種です。モーターが回転運動を実現するのに大して、ソレノイドは直線運動を実現してくれます。キックには最適というわけです。</p>
+<h2 id="_3">構造・原理</h2>
+<p><img alt="img|207" src="https://www.takaha.co.jp/technological/img/action/img_01.gif" />
+- 可動鉄心
+    - 直線的に動く部分
+    - 一番重要
+- フレーム
+    - ただの枠
+- 銅線
+    - コイル
+    - ここに電流を流して磁場を発生させる
+- 固定鉄心
+    - 可動鉄心が吸引される場所
+1. コイルに電流を流す。
+    - 磁場が発生する
+2. <strong>可動鉄心が吸引される</strong>
+    - 固定鉄心に可動鉄心が吸引される
+    - 磁場による
+3. コイルに電流を流すのをやめる
+    - 磁場の発生が終わる
+4. <strong>可動鉄心が伸びる</strong>
+    - 内部にあるバネによる</p>
+<p>以上がソレノイドの伸び縮みの一連の流れです。キックもこの単純な動作で実現します。</p>
+<p>ソレノイドを選定する際にはストローク長に注意する必要があります。10cmぐらいのものを使っておけば大丈夫です。</p>
+<h2 id="_4">キック回路</h2>
+<p>原理のところでわかるようにコイルに流れる電流をOn/Offして上げるだけで済みます。しかし、ソレノイドには大きな電圧をかけ、そこそこ大きな電流を流す必要があるのでマイコンから直接On/Offすることはできません。</p>
+<p>ソレノイドを使ったキックの力は主に<strong>ソレノイドの抵抗値</strong>、<strong>電圧</strong>、<strong>通電率</strong>に依存します。（もちろんソレノイド自身の性能にも依存しますがこの資料ではそこは取り扱いません。）本来であればボールの質量や飛ばしたい距離などからソレノイドの出力を求める必要があります。ただ、ロボカップサッカーのキッカーほどでわざわざ物理計算をする必要がないのでここでは割愛します。ロボカップサッカーではキッカーの威力に制限がありますが、キッカーの威力を測定する装置で測定すればよいので、色々な電圧や通電率で試してみるのが良いと思います。</p>
+<p><img alt="ima|335" src="https://takaha.co.jp/product/cb/img/item/cb1037_image_02_l.gif" />
+この画像は<a href="https://www.takaha-shop.com/SHOP/cb1037.html">タカハのソレノイドCB1037</a>の仕様定格表です。</p>
+<p>これを見ると最低でもDC6Vが想定されていますね。何が言いたいかと言うとキッカーにはかなりの電圧が必要ということです。現状のロボカップサッカーでは昇圧したときの電圧制限はなかったと思うので、やればやるほど強くなります。ただ、先述の通りキッカーの威力に制限があるので注意が必要です。私のときには40Vまで昇圧していました。</p>
+<h3 id="_5">昇圧回路</h3>
+<p>自作でも既製品を使用するのでも構いません。私は後者をおすすめします。私のときには40Vまで昇圧できる昇圧回路を使用しましたが、めちゃくちゃ壊れたのでおすすめしません。（設計の問題だと思うけど）パワー電源を扱う回路の開発は使わないものに比べて遥かに大変なのでおすすめしません。この資料で昇圧回路の作り方については触れません。（電源についての資料で触れるかも）</p>
+<p>以下にいくつかおすすめの昇圧回路モジュールを紹介します。
+- <a href="https://www.amazon.co.jp/%E3%83%95%E3%83%AA%E3%83%BC%E3%83%95%E3%83%A9%E3%82%A4%E3%83%B3%E3%82%B0-6%E5%80%8B-LM2596-DC-DC%E9%99%8D%E5%9C%A7%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF3-0%E3%80%9C40V%E3%80%9C1-5%E3%80%9C35V%E9%9B%BB%E6%BA%90%E9%99%8D%E5%9C%A7%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/dp/B07NVSVW1N?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;crid=2XDT1G8KHMT83&amp;dib=eyJ2IjoiMSJ9.4XwGe0aab2NuDK_g3QLv9bvv38gBVU5x0-Q6IJbXGOb862b_8OiNJC2ezb4RSyDoMqzver_MkipHGn7mw-qkcBHDP4v0YNmm2v9oSQM9jV4PApI6HTog4A0x5F-KBKRtVNzRugowtWxIR9EHJdlnjS6KltYFE0oXqRuiXwpZbGhbOCtTKSvcaVkKYC8PRR5PX401-3E_4qZqhUwjPvAnRpP3ocTqG93l6BblaVTdtKbXUAFuRlkoseURQTeVfFfx7V6xsfC0K05bxbukUPwmvXHdPL9Uwq3Gzh7e7wDuo5A.aDkEdXfdT9TR9LxGWOUoPg9m-XHH0C0uJoTq6oC8Ssw&amp;dib_tag=se&amp;keywords=dcdc+%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%83%BC&amp;qid=1731070784&amp;sprefix=dcdc%E3%82%B3%E3%83%B3%E3%83%90%E3%83%BC%E3%82%BF%E3%83%BC,aps,178&amp;sr=8-5">LM2596 DC - DC降圧コンバータ</a>
+    - 35Vまで昇圧できて良い
+    - 改造すると40Vぐらいまで出力できるらしい
+    - 使われているICが偽造品疑惑があるが動けばヨシ
+    - 出力電流も十分
+- <a href="https://akizukidenshi.com/catalog/g/g107406/">最大30V出力 昇圧型スイッチング電源モジュール NJW4131使用</a>
+    - 30Vまで昇圧できて良い
+    - 正規品なので信頼性がある
+    - 出力電流も十分</p>
+<h3 id="_6">スイッチング回路</h3>
+<p>昇圧した電源をソレノイドにつなぐためのスイッチング回路について解説します。こちらは自作が必要になると思います。電圧が低いマイコンから高電圧電源をスイッチングするのでやることはモータードライバと大きく変わりません。つまり、MOSFETを使うことになります。</p>
+<p>MOSFETを使ったスイッチには<strong>ハイサイドスイッチ</strong>と<strong>ローサイドスイッチ</strong>の2つがあります。それぞれにメリット・デメリットがあるので回路構成とともに解説します。<img alt="img|214" src="https://analogista.jp/wp-content/uploads/2021/05/hssw03.jpg" /></p>
+<h3 id="_7">ハイサイドスイッチ</h3>
+<p>名前の通りハイサイド（電源と負荷（今回の場合はソレノイド）の間）側をMOSFETによってスイッチングするものになります。以下が主な特徴です。</p>
+<ul>
+<li>長所<ul>
+<li>グラウンド側との接続が遮断されない<ul>
+<li>回路全体が浮いた状態にならない</li>
+</ul>
+</li>
+<li>スイッチの先でショートした場合に電源を遮断できる<ul>
+<li>ショート検知用の電流センサが別途必要</li>
+</ul>
+</li>
+<li>比較的安全<ul>
+<li>回路から電源を遮断することでOffしているので、Off時に危険な動作をする可能性が比較的低い</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>短所<ul>
+<li>Pch MOSFETを使用する必要がある<ul>
+<li>高価、入手性が悪い</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="_8">使い方と注意</h4>
+<p>ハイサイドスイッチの基本的な回路は以下のようになっています。（L1はインダクタですが、実際にはここに負荷を接続することになります。Pch MOSFETを使用しているので、MOSFETの上側の入力がソースで下側の出力がドレインです。）
+![[highsideswitch.jpg|279]]
+この回路では、INPUTに入力される電圧に応じてMOSFETの状態が変化します。理由は回路図を見れば明らかです。（VDDはパワー電源です。）MOSFETのゲートはプルアップされているので、<strong>入力がハイインピーダンス（※1）の時には</strong><span class="arithmatex">\(<span class="arithmatex">\(V_{gs} = 0 &gt; V_{th}\)</span>\)</span>となるのでMOSFETはOff状態になります。（※2）</p>
+<p>MOSFETをOnにするにはINPUTをLowにして、
+<span class="arithmatex">\(<span class="arithmatex">\(V_{gs} = -VDD &lt; V_{th}\)</span>\)</span>としてやれば良いわけです。（※2）</p>
+<p>先ほど、注意が必要と述べましたがなぜか考えていきます。MOSFETをOnにするにはINPUTをハイインピーダンスにする必要がありました。なぜ、Highではだめなのでしょうか？マイコンのGPIOとINPUTが接続されいてる前、INPUTピンはプルアップされているので <span class="arithmatex">\(V_{INPUT} = V_g = V_E\)</span> となっています。ここに、マイコンのGPIOをHighの状態で接続すると、マイコンのピンに電圧<span class="arithmatex">\(V_E\)</span>がかかることになります。基本的にマイコンのGPIOの耐圧は5V程度です。基本的に<span class="arithmatex">\(V_E &gt; 5\)</span>であるのでパワー電源がマイコンに流れ込み、マイコンが壊れます。一方、Lowの状態であればマイコンにパワー電源が流れ込むこと無くグラウンド側に逃げてくれるので壊れることはありません。</p>
+<p>※1：信号線がいずれの電源やグラウンドに対しても非常に高いインピーダンスとなっている状態。インピーダンスとは交流回路における抵抗。今回の場合はいわゆる抵抗だと思ってくれれば良い。ハイインピーダンスにおける各電源、グラウンドとの間の抵抗は極めて大きく、接続されていない状態とみなすことができる。100kΩとかそういう次元ではなくもっと大きい。
+※2：<strong>Pch MOSFET</strong>を使用しているので回路図上の上側がSource、下側がDrainとなっています。また、<span class="arithmatex">\(V_{th} &lt; 0\)</span>となっています。
+※3：MOSFETにはゲート-ソース間電圧に入力して良い電圧の範囲が決まっています。今回解説している回路ではゲート-ソース間電圧の絶対値が電源電圧と一致してしまうので、電源電圧が大きいときは範囲をオーバーしないかどうか注意する必要があります。オーバーしてしまう場合には回路を工夫する必要があります。この資料では解説しないので気になる人は<a href="https://tsuzureya.net/simple-mosfet-circuits-with-microcontroller-02/">この記事</a>を参考にしてください。</p>
+<h3 id="_9">ローサイドスイッチ</h3>
+<p>名前の通りローサイド（負荷（今回の場合はソレノイド）とグラウンドの間）側をMOSFETによってスイッチングするものになります。以下が主な特徴です。</p>
+<ul>
+<li>長所<ul>
+<li>Nch MOSFETが使える<ul>
+<li>安価、入手性が良い</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>短所<ul>
+<li>Off時に回路が浮いた状態になる<ul>
+<li>回路とグラウンドを切り離しているため</li>
+<li>Off時に回路上の電位が定まらないので<strong>他の回路と接続する際には注意が必要</strong><ul>
+<li>独立した回路として運用するなら問題ない</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>スイッチングのために負荷に接続する電源より高電圧な電源を用意する必要がある<ul>
+<li>Nch MOSFETをOnにするには <span class="arithmatex">\(<span class="arithmatex">\(V_{gs} \geq Vth\)</span>\)</span> が必要であるが、On時には <span class="arithmatex">\(<span class="arithmatex">\(V_s = V_E \quad V_E：負荷につなぐ電源電圧\)</span>\)</span>であるので、<span class="arithmatex">\(<span class="arithmatex">\(V_g \geq V_s + V_{th} = V_E + V_{th}\)</span>\)</span>が必要になるため。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="_10">使い方と注意</h4>
+<p>以下がローサイドスイッチの簡単な回路になっています。（ハイサイドスイッチのときと同じようにインダクタL1を負荷に置き換えて考えてください。Nch MOSFETを使用しているので上側の入力がドレイン、下側の出力がソースです。）
+![[lowsideswitch.jpg|358]]
+INPUTがLowもしくはハイインピーダンスの場合には
+$$
+V_{gs} = 0 &lt; V_{th}
+$$
+となるので、MOSFETはOffとなります。一方、マイコンでINPUTをHIGH（3.3V、5V）としたときには
+$$
+V_{gs} = 3.3, 5.0 &gt; V_{th}
+$$
+となるのでMOSFETはONとなります。</p>
+<h3 id="_11">絶縁回路</h3>
+<p>ソレノイドはコイルと鉄心からできているので、ソレノイドが動作することでソレノイドが電圧を発生させます。ソレノイドによって起こった電圧により、ソレノイドから他の回路へ電流がノイズとして流れていきます。</p>
+<p>ノイズは他の電子機器の動作に悪影響を及ぼす可能性があります。悪影響と一概に言ってもら色々な症状があります。ロボカップをやるうえで問題になるであろう症状だけ記しておきます。</p>
+<ul>
+<li>電子部品の故障<ul>
+<li>想定されていない大きさ・方向の電流が流れ込んだり、許容以上の電圧がかかったりすることで、マイコンやセンサ、その他の部品が故障する可能性があります。</li>
+<li>キッカーのノイズによりマイコンが壊れる現象はロボカップ界隈では結構メジャーな不具合です。</li>
+</ul>
+</li>
+<li>マイコンやセンサのリセット<ul>
+<li>ノイズによりマイコンやセンサの動作が不安定になりリセットされてしまう可能性があります。</li>
+<li>例えば、試合中にマイコンがリセットして再起動することがあります。致命的な問題につながりうるので注意が必要です。</li>
+</ul>
+</li>
+<li>ADCの値がブレる<ul>
+<li>ADCでは電圧そのものを読み取ります。ノイズによって電圧が変化してしまったら良くないのは言うまでもありません。</li>
+<li>デジタル信号は2値（Low, High）なのである程度のノイズに耐性があります。</li>
+</ul>
+</li>
+</ul>
+<p>パワー側（モーターやキッカーなど）では大きな電圧や大きな電流を扱うので発生させるノイズも大きいです。これがロジック側（マイコンやセンサ）に大きな影響を与えます。そのためには、マイコン側とパワー側との信号のやりとりを電気的に分けること（絶縁）が効果的です。つまり、電気以外の方法で信号を伝えたやります。具体的には光や磁気を用います。（※）</p>
+<p>※1：絶縁を行うと言ってもロジック電源はパワー電源から生成されているので完全に絶縁するのは難しいですし、そこまでやる必要はありません。</p>
+<h4 id="_12">フォトカプラ</h4>
+<p>光を使って電気信号を伝える部品です。
+<img alt="img|257" src="https://akizukidenshi.com/img/goods/L/107442.jpg" /></p>
+<div style="font-size: 0.5em">出典:https://akizukidenshi.com/catalog/g/g107442/</div>
+<p>フォトカプラには1回路あたり4つのピンがあります。入力側の2ピンと出力側の2ピンがあります。フォトカプラの内部では、入力された信号で発光ダイオードを光らせて、その光をフォトトランジスタで受けとりトランジスタで増幅します。
+![[フォトカプラ.png | 100]]
+上図はとあるフォトカプラのデータシートに掲載されていたものです。左側の1,2ピンが入力側、右側の3,4ピンが出力側です。</p>
+<table>
+<thead>
+<tr>
+<th>ピン</th>
+<th>機能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1：アノード</td>
+<td>入力側の信号入力（LEDの長い端子だと思ってくれれば良い）</td>
+</tr>
+<tr>
+<td>2：カソード</td>
+<td>入力側のグラウンド（LEDの短い端子だと思ってくれれば良い）</td>
+</tr>
+<tr>
+<td>3：エミッタ</td>
+<td>出力側の信号出力（例えばMOSFETのゲートにつなげれば良い）</td>
+</tr>
+<tr>
+<td>4：コレクタ</td>
+<td>出力側の電源（コレクタ-エミッタ間電圧の最大値を越えないよう注意）</td>
+</tr>
+<tr>
+<td>上表のように接続してあげれば絶縁しながら信号伝達できます。<strong>ただ、1つだけ注意があります。入力側の発光ダイオードには流して良い電流の制限があります。"1：アノード"にマイコンからの信号を直接接続してしまうと許容電流よりも大きい電流が流れるおそれがあります。適切な大きさの抵抗を挟むことを忘れないでください。</strong> 抵抗値の計算については以下の計算式に各値を代入することで求めることができます。$$</td>
+<td></td>
+</tr>
+<tr>
+<td>R = \frac{V - V_F}{I_F}</td>
+<td></td>
+</tr>
+<tr>
+<td>$$</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V\)</span>：マイコンの出力電圧, <span class="arithmatex">\(V_F\)</span>：発光ダイオードの順電圧, <span class="arithmatex">\(I_F\)</span>：発光ダイオードの順電流</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V_F, I_F\)</span>はフォトカプラのデータシートに書いてあります。表現が多少異なることもあるかもしれませんが探せばどこかにあると思います。</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>そんなに難しくないので気軽に試してみると良いと思います。ものによっては1つのICで複数回路入っているものも存在します。複数の信号線を絶縁したいってなったときにはそういったものも探してみると良いと思います。</p>
+<h4 id="_13">アイソレーター</h4>
+<p>磁気を利用して信号を伝える部品です。
+<img alt="img|287" src="https://akizukidenshi.com/img/goods/L/113480.jpg" /></p>
+<div style="font-size: 0.5em">出典:https://akizukidenshi.com/catalog/g/g113480/</div>
+<p>正直なところ私はこの部品を1度しか使ったことが無いのである程度の解説はできても語ることはできないのでそこのところ許してください。フォトカプラに比べて高速信号の絶縁ができると耳にしたことがあります。高周波信号を入力するならこっちのほうが良いかも。自分で調べて適切な方を選んでください。それも開発の醍醐味です。
+![[アイソレーター.png|329]]
+適当に秋月電子で調べて出てきたアイソレーターを参考に載せていますが、これを例に使い方を簡単に解説します。このアイソレーターは2回路入っているものなので1つのICで2つの信号を絶縁、伝達できます。</p>
+<table>
+<thead>
+<tr>
+<th>ピン</th>
+<th>機能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(V_{DD1}\)</span></td>
+<td>入力側の電源</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V_{IA}\)</span></td>
+<td>入力側の信号入力ピン 1回路目</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V_{IB}\)</span></td>
+<td>入力側の信号入力ピン 2回路目</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(GND_1\)</span></td>
+<td>入力側のグラウンド</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V_{DD2}\)</span></td>
+<td>出力側の電源</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V_{OA}\)</span></td>
+<td>出力側の信号出力ピン 1回路目</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(V_{OB}\)</span></td>
+<td>出力側の信号出力ピン 2回路目</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(GND_{2}\)</span></td>
+<td>出力側のグラウンド</td>
+</tr>
+<tr>
+<td>上表にしたがって接続すれば動きます。私が使ったときも苦労しなかったです。フォトカプラと使い方は対して変わらないです。</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../js/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

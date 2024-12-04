@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>モータードライバ - ハードウェア開発 虎の巻</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">ハードウェア開発 虎の巻</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../license/" class="nav-link">License</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Mechanics</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../prepare_now/" class="dropdown-item">準備中</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Circuits</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Circuits/before_developing/" class="dropdown-item">電子工作を始める前に</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/signal/" class="dropdown-item">デジタル信号とアナログ信号</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/microcomputer/" class="dropdown-item">マイコンのすゝめ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/transmission/" class="dropdown-item">通信方式</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/motor_driver/" class="dropdown-item">モータードライバ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/ball_sensor/" class="dropdown-item">ボールセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/line_sensor/" class="dropdown-item">ラインセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/imu/" class="dropdown-item">IMU（ジャイロセンサなど）</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/kicker/" class="dropdown-item">キッカー</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/make_cable/" class="dropdown-item">ケーブル作成</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Program Intro</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Program-intro/about_c/" class="dropdown-item">C言語という言語について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/hello_world/" class="dropdown-item">Hello World!</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/variables_type/" class="dropdown-item">変数の宣言と型</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/operator/" class="dropdown-item">演算子について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/function/" class="dropdown-item">関数について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/array/" class="dropdown-item">配列について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/structure/" class="dropdown-item">構造体について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/pointer/" class="dropdown-item">ポインタについて</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/dynamic_memory/" class="dropdown-item">動的メモリ確保について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/library/" class="dropdown-item">ライブラリの読み込みについて</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/bit_operator/" class="dropdown-item">ビット演算について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/object_programing/" class="dropdown-item">オブジェクト指向概説</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/inheritance/" class="dropdown-item">継承について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/composition/" class="dropdown-item">時代は継承より合成</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">モータードライバとは</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">回路について</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_5" class="nav-link">使い方</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_6" class="nav-link">おすすめモータードライバ</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>著者：根岸孝次</p>
+<h2 id="_1">モータードライバとは</h2>
+<p>モータードライバとは、<strong>マイコンからの司令に基づきモーターに適切な電圧（電流）を供給する</strong>(※1)です。</p>
+<p>マイコンを駆動するために使用している電源（マイコンについている3.3/5V、<strong>ロジック電源</strong>と呼ぶ）は大きな電流を供給することができません。供給できても最大1A程度です。しかし、モーターが十分な速度とトルクで回転するには、十分な電圧・電流を供給する必要があるので（当たり前）、ロジック電源とは別に<strong>パワー電源</strong>を用意(※2)して、それを使って回転させる必要があります。ロジック電源の電圧よりパワー電源の電圧のほうが高いので、マイコンが単純にデジタル出力を使ってモーターをON/OFFすることはできません。（やろうとすると、パワー側からロジック側に電流が流れて、最悪故障します。）モータードライバはこの問題を解決するモジュールです。</p>
+<pre><code>※1：1つの機能を持った完成済みの回路・基板のことを**モジュール**と呼ぶことが多いです。
+※2：ロボカップジュニアでは、Li-Po(12V)を直接パワー電源として使って、パワー電源を降圧することでロジック電源(3.3/5V)を生成することがほとんどです。大人のロボカップでは、Li-Po(24V)を40数Vまで昇圧してパワー電源にする強強チームあるみたいです。
+</code></pre>
+<h2 id="_2">回路について</h2>
+<p>この資料では、ブラシ付きDCモーターを駆動することを想定した回路について扱います。ブラシレスDCモーターなどについて詳しく知りたい人は連絡してください。</p>
+<h3 id="mosfet">MOSFET</h3>
+<p>まずは、MOSFETについて理解する必要があります。端的に言えば<strong>大電流を電気的に扱えるスイッチ</strong>です。原理などについては興味があれば各自で調べてみてください。</p>
+<p>MOSFETには「<strong>ゲート(Gate)</strong>」、「<strong>ドレイン(Drain)</strong>」、「<strong>ソース(Source)</strong>」という3つのピンがあります。ゲートにかかる電圧に応じて、ドレイン-ソース間が導通するかどうか決定されます。MOSFETの何がすごいかというと、ゲートにある程度の電圧かけて、ある程度の電流を供給できれば、ドレイン-ソース間に大電流を流すことができます。素晴らしい。（もちろん制限などはありますが）</p>
+<p>MOSFETの中には、<strong>Nch MOSFET</strong>と<strong>Pch MOSFET</strong>(※)の2つがあります。少し動作が異なるのでそれぞれ解説します。</p>
+<pre><code>※ Nchは「Nチャネル」、Pchは「Pチャネル」と読みます。MOSFETは「モスフェット」
+</code></pre>
+<p>今後の解説を楽にするために用語を定義しておきます。
+aから見たbの電圧をVbaと描くことにします。ゲートをg、ドレインをd、ソースをsとかけば、一概にゲート電圧といってもVgsとVgdの2つがあります。今後、ゲート電圧と言えば<strong>Vgs</strong>を指しているので混同しないように注意してください。
+また、MOSFETがONになるためにはゲート電圧があらかじめ決められた電圧を超える必要があります。この電圧を<strong>しきい値電圧 Vth</strong> と呼びます。</p>
+<h3 id="nch-mosfet">Nch MOSFET</h3>
+<p>頻繁に使うのがNch MOSFETです。基本的にモータードライバはこっちで作ってあります。単純にPch MOSFETよりも安価だからと聞きました。</p>
+<p><img alt="img|184" src="https://electronic-circuit.com/wp-content/uploads/2021/01/mosfet-symbol-nch-enhancement.jpg" /></p>
+<div style="font-size: 0.5em">出典:https://electronic-circuit.com/wp-content/uploads/2021/01/mosfet-symbol-nch-enhancement.jpg</div>
+
+<p>Nchの場合、電流はドレインからソースに方向に流れます。逆は試したことが無いので知りませんが、スイッチングするのはドレインからソースの方向です。ON/OFFの条件を表にまとめました。</p>
+<table>
+<thead>
+<tr>
+<th>状態</th>
+<th style="text-align: right;">条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ON</td>
+<td style="text-align: right;">Vgs &gt; Vth</td>
+</tr>
+<tr>
+<td>OFF</td>
+<td style="text-align: right;">Vgs &lt; Vth</td>
+</tr>
+<tr>
+<td><strong>※ ゲート電圧は Vgs です。Vgdでは無いので注意してください。</strong></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>※ 一般的に、Vth &gt; 0</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="pch-mosfet">Pch MOSFET</h3>
+<p>次に、Pch MOSFETについて解説します。Pch MOSFETはなかなか使う機会がありません。実際、この資料を書いている本人がPch MOSFETを実際に使ったのは1回だけです。ロボットの電源スイッチとしてPch MOSFETを一度だけ使いました。
+<img alt="img|183" src="https://electronic-circuit.com/wp-content/uploads/2021/01/mosfet-symbol-pch-enhancement.jpg" /></p>
+<div style="font-size: 0.5em">出典:https://electronic-circuit.com/wp-content/uploads/2021/01/mosfet-symbol-pch-enhancement.jpg</div>
+
+<p>Pchの場合、電流はソースからドレインの方向に流れます。Nchとは逆方向です。ON/OFFの条件は表のとおりです。</p>
+<table>
+<thead>
+<tr>
+<th>状態</th>
+<th style="text-align: right;">条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ON</td>
+<td style="text-align: right;">Vgs &lt; Vth</td>
+</tr>
+<tr>
+<td>OFF</td>
+<td style="text-align: right;">Vgs &gt; Vth</td>
+</tr>
+<tr>
+<td>※ 一般的に、Vth &lt; 0</td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">一般的なモータードライバの回路</h3>
+<p>MOSFETの基本的な使い方を理解したところで、基本的なモータードライバの回路図を見ていきましょう。ブラシ付きDCモーターのモータードライバは以下のような4つのNch MOSFETをH型に並べた回路になっています。上下の2つのMOSFETをあわせて<strong>ハーフブリッジ</strong>、4つのMOSFETをあわせて<strong>フルブリッジ</strong>と呼びます。</p>
+<p><img alt="img|486" src="https://practicalelectronicsblog.com/wp-content/uploads/2023/02/27d027053a3097d26f58d02ddd93d206.png" /></p>
+<div style="font-size: 0.5em">出典:https://practicalelectronicsblog.com/wp-content/uploads/2023/02/27d027053a3097d26f58d02ddd93d206.png</div>
+
+<p>上2つのMOSFETはパワー電源とモーターの各線をつなぐスイッチの役割があります。一方、下2つのMOSFETはグランドとモーターの各線をつなぐスイッチの役割があります。頭の良い高高生ならわかると思いますが、上2つのMOSFETのうち1つのMOSFETをONにし、それと対角線上にある下のMOSFETをONにすることで、モーターが回転します。別のMOSFETをONにすれば、電流が逆向きに流れるのでモーターは逆回転します。</p>
+<p>右(左)2つのMOSFETを同時にONにしたらパワー電源とグラウンドがショートしてしまい非常に危険です。しかし、残念ながらモータードライバーではそういった自体が起こらないように、下側のMOSFETがONの際には、それに対応する上のMOSFETはONにできないよう制御されています。</p>
+<h3 id="_4">モーターの回転速度</h3>
+<p>以上のことを理解すれば、モーターの正回転、逆回転を切り替える方法はわかったと思います。次に、モーターの回転速度の調節の仕方を学んでいきましょう。回転速度の調節には<strong>SMB方式</strong>と<strong>LAP方式</strong>があります。一般的なブログでは、前者が紹介されています。後者を紹介しているブログは殆ど見かけないです。一般的なモーターはSMB方式で回すのが良いです。ただし、高高にあるMAXONモーターだけはLAP方式のほうが良いと言われています。</p>
+<h4 id="smb">SMB方式</h4>
+<p>マイコンがMOSFETを制御するときに出す信号（PWM）はデジタル信号です。一方で、モーターの回転速度がデジタルでは困ります。アナログで無くてはなりません。0rpm ~ 1000rpmのように、特定の範囲で制御できないと意味がありません。そこで、MOSFETがON（モーターが回転している）の時間とMOSFETがOFF（モーターが回転しない）の時間の比率を調節することで、擬似的に回転速度を調節します。高高生ならこれ以上解説する必要は無いと思います。</p>
+<h4 id="lap">LAP方式</h4>
+<p>SMB方式はPWM信号の考え方の延長で理解できると思います。大体の人が思いつくやり方です。LAP方式のほうが少し奇抜です。LAP方式では、正回転と逆回転の比率によって回転速度を調節しています。モーターを回転させている間は、常にどこかのMOSFETがONになっていて、どのMOSFETをONにするかを切り替えることで速度を変えています。</p>
+<table>
+<thead>
+<tr>
+<th>状態</th>
+<th style="text-align: right;">回転</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>(正回転の時間) &gt; (逆回転の時間)</td>
+<td style="text-align: right;">正回転</td>
+</tr>
+<tr>
+<td>(正回転の時間) &lt; (逆回転の時間)</td>
+<td style="text-align: right;">逆回転</td>
+</tr>
+<tr>
+<td>(正回転の時間) = (逆回転の時間)</td>
+<td style="text-align: right;">停止(※1)</td>
+</tr>
+<tr>
+<td>下2つのMOSFETをショート</td>
+<td style="text-align: right;">ブレーキ</td>
+</tr>
+</tbody>
+</table>
+<p>また、<strong>下2つのMOSFET</strong>を同時にONにすることでモーターの線がショートし、回転にものすごい大きな抵抗がかかります。これをショートブレーキと呼びます。<strong>ブレーキを利用したいときには、ショートブレーキを利用してください。※1の状態では、モーターには電流が流れ続けているのでモーターが非常に発熱し故障に繋がります。</strong></p>
+<p>理由は知らないのですが、LAP方式を利用する際には、PWM信号の周波数を高くして上げる必要があります。私のときには100kHzのPWM信号を利用していました。使用していたモータードライバの最大周波数が100kHzだったためです。流石に過剰だと思います。実は周波数を上げるとスイッチング損失が増えるのでちゃんと考えましょう。ただ、20kHzより低くすると人間の可聴域に入ってきてモーターが不愉快な音を立てる場合があります。</p>
+<p>この制御方式では、常にモーターにかなりの電流が流れ続けます。SMB方式に比べて頭の悪いやり方です。モーターの発熱もかなりひどいです。バッテリーの消耗も激しくなります。しっかりと考えてからこの制御方式を利用してください。詳しいことは<a href="https://tattatatakemori.hatenablog.com/entry/2017/07/20/232827">このさいと</a>にあるので意欲のある人は読んでみてください。</p>
+<h2 id="_5">使い方</h2>
+<p>市販のモータードライバ <a href="https://www.switch-science.com/products/2631">Pololu G2ハイパワーモータードライバ 18v17</a>を例に解説します。たくさんピンがありますが、モーターを制御するだけだったら、7つのピンで十分です。
+<img alt="img|452" src="https://a.pololu-files.com/picture/0J6859.600.jpg?aea32f7884898b8ed9f365aa07beea49" /></p>
+<div style="font-size: 0.5em">出典:https://a.pololu-files.com/picture/0J6859.600.jpg?aea32f7884898b8ed9f365aa07beea49</div>
+<ul>
+<li>パワー側<ul>
+<li>VIN（パワー電源の+側）</li>
+<li>GND（パワー電源の-側、グラウンド）</li>
+<li>OUTA（モーター線）</li>
+<li>OUTB（モーター線）</li>
+</ul>
+</li>
+<li>ロジック側<ul>
+<li>PWM（マイコンからの制御信号1）</li>
+<li>DIR（マイコンからの制御信号2）</li>
+<li>GND（グラウンド）
+<strong>※ パワー側GNDとロジック側GNDは必ず繋いでください。このミスでモーターが正しく制御できていな後輩を何度も見てきました。</strong></li>
+</ul>
+</li>
+</ul>
+<h3 id="smb_1">SMB方式の場合</h3>
+<p>DIRでモーターの回転方向を指定します。こちらのピンはデジタル信号(HIGH or LOW)で制御します。各状態(HIGH,LOW)と正回転、逆回転がどう対応するかはモーター依存なところもあるので1つ1つ確認する必要があります。</p>
+<p>PWMでモーターの回転速度を制御します。ArduinoのanalogWriteでは、デフォルトでPWMのDuty比を0~255(8bit)で指定できます。どの値を使うかは色々試していい感じに決めてもらえば良いと思います。255とかでやるとモーターが焼き切れる可能性があるので、開発段階では100とかで十分です。全国大会で上位を目指すレベルまで来たら150以上にしてみると良いと思います。</p>
+<h3 id="lap_1">LAP方式の場合</h3>
+<p>モーターを回したいときには、PWMを常にHIGHにします。PWMをLOWにするとショートブレーキ状態になります。</p>
+<p>回転方向と回転速度はDIRで制御します。DIRにPWM信号を入力してあげましょう。Duty比がちょうど中間(Arduinoのデフォルトであれば、127程度)でモーターが停止します。0と255で最大回転となります。こちらも色々試していい感じの速度を見つけてください。SMB方式より遅い速度で運用したほうが安全だと思います。<strong>発熱に最大限注意してください。</strong></p>
+<h2 id="_6">おすすめモータードライバ</h2>
+<ul>
+<li>
+<p>1.<a href="https://www.switch-science.com/products/2631"> Pololu G2 ハイパワーモータードライバ 18v17</a></p>
+<ul>
+<li>小型、かわいい</li>
+<li>大電流流せる(15A~)</li>
+<li>LAP方式に向いている(~100kHz)</li>
+<li>高機能(詳しいことはメーカー公式ページをみて)</li>
+<li>もっと<a href="https://www.switch-science.com/catalog/2632/">強いやつ</a>もある</li>
+<li>高い</li>
+<li>流通量が少ない</li>
+</ul>
+</li>
+<li>
+<p>2.<a href="https://www.switch-science.com/collections/%E3%83%AD%E3%83%9C%E3%83%86%E3%82%A3%E3%82%AF%E3%82%B9/products/8259"> DRV8874搭載 ブラシ付きDCモータドライバ基板</a></p>
+<ul>
+<li>超小型、推せる</li>
+<li>そこそこ電流流せる(~6A)</li>
+<li>安価</li>
+<li>流通量が少ない</li>
+</ul>
+</li>
+<li>
+<ol>
+<li><a href="https://www.daisen-netstore.com/shopdetail/000000000059/">DAISEN 4CHモーターコントローラー</a></li>
+<li>シンプル</li>
+<li>4つモーターを同時に駆動できる</li>
+<li>高い</li>
+<li>でかい</li>
+<li>制御がI2Cかシリアル通信なのでめんどい</li>
+</ol>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../js/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>IMU（ジャイロセンサなど） - ハードウェア開発 虎の巻</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">ハードウェア開発 虎の巻</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../license/" class="nav-link">License</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Mechanics</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../prepare_now/" class="dropdown-item">準備中</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Circuits</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../before_developing/" class="dropdown-item">電子工作を始める前に</a>
+</li>
+                                    
+<li>
+    <a href="../signal/" class="dropdown-item">デジタル信号とアナログ信号</a>
+</li>
+                                    
+<li>
+    <a href="../microcomputer/" class="dropdown-item">マイコンのすゝめ</a>
+</li>
+                                    
+<li>
+    <a href="../transmission/" class="dropdown-item">通信方式</a>
+</li>
+                                    
+<li>
+    <a href="../motor_driver/" class="dropdown-item">モータードライバ</a>
+</li>
+                                    
+<li>
+    <a href="../ball_sensor/" class="dropdown-item">ボールセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../line_sensor/" class="dropdown-item">ラインセンサ</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">IMU（ジャイロセンサなど）</a>
+</li>
+                                    
+<li>
+    <a href="../kicker/" class="dropdown-item">キッカー</a>
+</li>
+                                    
+<li>
+    <a href="../make_cable/" class="dropdown-item">ケーブル作成</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Program Intro</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Program-intro/about_c/" class="dropdown-item">C言語という言語について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/hello_world/" class="dropdown-item">Hello World!</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/variables_type/" class="dropdown-item">変数の宣言と型</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/operator/" class="dropdown-item">演算子について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/function/" class="dropdown-item">関数について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/array/" class="dropdown-item">配列について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/structure/" class="dropdown-item">構造体について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/pointer/" class="dropdown-item">ポインタについて</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/dynamic_memory/" class="dropdown-item">動的メモリ確保について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/library/" class="dropdown-item">ライブラリの読み込みについて</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/bit_operator/" class="dropdown-item">ビット演算について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/object_programing/" class="dropdown-item">オブジェクト指向概説</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/inheritance/" class="dropdown-item">継承について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/composition/" class="dropdown-item">時代は継承より合成</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../line_sensor/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../kicker/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">概要</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_2" class="nav-link">ジャイロセンサとは</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_5" class="nav-link">加速度センサについて</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_6" class="nav-link">磁力計について</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#dmp" class="nav-link">DMPについて</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>著者：根岸孝次</p>
+<p>めちゃめちゃ重要なIMU、ジャイロセンサについて解説します。</p>
+<h2 id="_1">概要</h2>
+<h3 id="imu">IMUとは</h3>
+<p>IMU（Inertial Measurement Unit、慣性計測装置）は、物体の加速度や角速度を測定し、位置や姿勢を推定するためのデバイスです。IMUは通常、3軸の加速度計と3軸のジャイロスコープを備え、3次元空間での動きを捉えます。場合によっては、3軸の磁力計が追加され、方位角も計測できます。IMUは、ロボット、自動車、ドローンなどで位置制御やナビゲーションに利用されます。データはフィルタ処理を通じてノイズを抑え、より正確な姿勢推定を可能にします。</p>
+<p>ロボカップでは、ロボットがどの向きを向いているかを把握するために利用します。コートに垂直な軸周りの回転量を求めます。</p>
+<h2 id="_2">ジャイロセンサとは</h2>
+<p>ジャイロセンサ（ジャイロスコープ）は、物体の回転や角速度を検出するセンサで、角速度の変化を測定することで物体の姿勢や方向を把握します。3軸のジャイロセンサは、X、Y、Zの各軸に対する回転を測定でき、3次元空間での回転動作を解析するために使用されます。この技術は、ドローンやスマートフォン、車両の安定化や姿勢制御に広く利用されています。ジャイロセンサの出力は、フィルタリングされることで精度が向上し、IMUと組み合わせてさらに安定した姿勢推定が可能になります。</p>
+<p>他にも加速度計、磁力計がありますが、これらを組み合わせて物体の姿勢を推定するためのデバイスがIMUとなります。</p>
+<div class="arithmatex">\[
+加速度計 \subset IMU, \quad ジャイロスコープ \subset IMU, \quad 磁力計 \subset IMU
+\]</div>
+<p>ロボカップで機体の角度を推定するために最も活躍するものがジャイロスコープです。まずはジャイロスコープについて軽く解説します。</p>
+<p>ジャイロスコープは3つの軸（<span class="arithmatex">\(x,y,z\)</span>軸）周りの角速度（<span class="arithmatex">\(rad/s\)</span>）を計測するデバイスです。マイコンでI2Cなどを利用してそれらの値を取得します。我々がほしいのは角度（<span class="arithmatex">\(rad\)</span>）ですので、角速度を積分してあげればよいわけです。それぞれの軸周りの回転量を<span class="arithmatex">\(\phi, \theta, \psi\)</span>とすると、それぞれの軸周りの角速度は<span class="arithmatex">\(\frac{d\phi}{dt}, \frac{d\theta}{dt}, \frac{d\psi}{dt}\)</span>となります。したがって、</p>
+<div class="arithmatex">\[
+\phi (t) = \int_{0}^{t} \frac{d\phi}{dt}dt + \phi_0, \quad \theta (t) = \int_{0}^{t} \frac{d\theta}{dt}dt + \theta_0, \quad \psi (t) = \int_{0}^{t} \frac{d\psi}{dt}dt + \psi_0
+\]</div>
+<p>となります。ロボカップでは、コートに垂直な軸周りの回転量だけわかれば十分です。ジャイロセンサの配置を工夫して、<span class="arithmatex">\(x,y,z\)</span>軸のいずれかがコートと垂直になるようにしてあげれば、計算が単純になります。（ジャイロセンサの基板やデータシートに大体軸の正に方向は記してあります。）この資料では、<span class="arithmatex">\(z\)</span>軸がコートと垂直であると仮定して話を進めていきます。</p>
+<h3 id="_3">実際に積分をする</h3>
+<p>積分をすれば良いと言いましたが、数学でやるような完璧な積分は残念ながら不可能です。そもそも、ジャイロセンサが計測してくれる角速度が連続な値ではなく周期的に計測して離散的な値だからです。また、マイコンも処理速度に限界があるので連続に処理を行うことができません。</p>
+<p>積分の基礎に戻って考えます。角速度が<span class="arithmatex">\(\dot{\psi}(t)\)</span>で短い時間<span class="arithmatex">\(\Delta t\)</span>の間の角度変化は<span class="arithmatex">\(\Delta \psi(t) = \dot{\psi}\Delta t\)</span>と表せますね。したがって、</p>
+<div class="arithmatex">\[
+\psi(t+\Delta t) = \psi(t) + \Delta \psi(t) = \psi(t) + \dot{\psi} \Delta t
+\]</div>
+<p>となります。<span class="arithmatex">\(\Delta t\)</span>を十分小さくして行けば、<span class="arithmatex">\(\psi (t)\)</span>はある程度正確な値になるはずです。実際の制御ではこのようにして角度を求めていきます。ちなみに、この考え方より簡単にもう少しだけ精度が<strong>上がるかもしれない</strong>方法もあります。先程の方法では細かい長方形で面積を近似する方法でしたが、台形で近似することも可能です。</p>
+<p><span class="arithmatex">\(\Delta t\)</span>の調べ方ですが、Arduinoではmills関数とmicros関数が存在します。この関数は、Arduinoが起動してから何ミリ、マイクロ秒経過したかを返してくれる関数です。（※1,2）積分をロープ実行すると思うので、前回積分を行ったときの時刻と次に積分を行う時刻の差から<span class="arithmatex">\(\Delta t\)</span>が求まります。それぞれの関数から求まる<span class="arithmatex">\(\Delta t\)</span>の単位は<span class="arithmatex">\(ms, \mu s\)</span>です。積分をする際には、単位を<span class="arithmatex">\(s\)</span>に変換することを忘れないでください。
+$$
+\Delta t = t_{now} - t_{past}
+$$
+※1: 起動してからの時間というのは正確には誤りです。時間を格納する変数にも格納できる数の最大値があります。それを越えてしまうとオーバーフローという現象が起こり、0から再度スタートすることになります。今回の使い方だと<span class="arithmatex">\(\Delta t\)</span>がわかればよいので時刻が正確でなくても問題ではありません。
+※2: mills関数とmicros関数のどちらを利用するかはそれぞれを試してデバッグをしながら決めていけば良いと思います。積分以外に行っている処理やマイコンの処理能力にかなり依存するので注意が必要です。また、STM32マイコンなどではタイマー割り込みの設定が容易なので<span class="arithmatex">\(\Delta t\)</span>を固定して積分を行うことも可能です。</p>
+<h3 id="_4">補正をする</h3>
+<p>残念ながら積分して得られる角度はかなり信頼できないことが多いです。主に2つの要因があります。</p>
+<ul>
+<li>ドリフト<ul>
+<li>静止しているときの角速度が<span class="arithmatex">\(0\)</span>でないことが原因</li>
+<li>機体が静止していても角度が勝手に増えていく（減っていく）<ul>
+<li>実際に確認してみることが重要</li>
+</ul>
+</li>
+<li>機体を数秒間静止させた時の角速度の平均を算出し、それをオフセットとして、センサから取得した角速度からオフセットを引いた値を真の角速度として利用する。$$ \psi = \psi_{raw} - \psi_{offset} $$</li>
+</ul>
+</li>
+<li>スケールファクター誤差<ul>
+<li>センサから取得した角速度<span class="arithmatex">\(\psi_{raw}\)</span>が真の値<span class="arithmatex">\(\psi_{true}\)</span>としたときに、定常的に<span class="arithmatex">\(r\)</span>倍となっている現象。$$ r = \frac{\psi_{raw}}{\psi_{true}}$$</li>
+<li>機体をピッタリ10回転程度させたときとの<span class="arithmatex">\(\psi\)</span>の変化量<span class="arithmatex">\(\Delta \psi\)</span>を<span class="arithmatex">\(20\pi\)</span>で割ることで<span class="arithmatex">\(r\)</span>を求める。$$ r = \frac{\Delta \psi}{20\pi} $$</li>
+<li>ドリフトの補正をして得られた角速度を<span class="arithmatex">\(r\)</span>で割って利用する。</li>
+</ul>
+</li>
+</ul>
+<p>最低限ドリフトの補正はやる必要があります。スケールファクター誤差は必要に応じてやってください。ロボットの電源を付けたら毎回これらの補正をやるのが理想ですが、手間なので定期的にやると良いと思います。</p>
+<h2 id="_5">加速度センサについて</h2>
+<p>名前の通り3つの軸方向の加速度を計測するセンサです。実は、加速度からも機体の角度を算出できます。（yaw軸まわりの角度は求められないと何処かで聞きました。真偽不明。）地球上では常に重力加速度<span class="arithmatex">\(g\)</span>が地面に垂直で下向きにかかっています。機体の角度に応じてこれを<span class="arithmatex">\(a_x, a_y, a_z\)</span>に分解できます。この事実を利用して角度を求めるようです。自分で利用したことがないので詳しい計算式などについては<a href="https://garchiving.com/angle-from-acceleration/">ここ</a>などを参考にしてみるとよいのではないでしょうか？</p>
+<h2 id="_6">磁力計について</h2>
+<p>磁力計も名前の通り磁力を計測するセンサです。地磁気センサとも呼びます。3つの軸それぞれの方向の磁力の強さと向きがわかります。（S極とN極どちらが正であるかなどはデータシートを参考にしてください。）実は、これを利用しても機体の姿勢を推定することができます。びっくり。</p>
+<p>地球自体が1つの磁石であることは皆さんご存知のはずです。北極がS極、南極がN極ですね。これは地球上どこに行っても同じです。これを利用して姿勢を推定します。詳しい計算方法などは忘れたので調べてください。<a href="https://qiita.com/take4eng/items/8afd467e82e2c93f19e4">ここ</a>などで解説されています。</p>
+<p>ただ、地磁気を利用した姿勢の推定には大きな弱点があります。この方法では、他の磁場に大きな影響を受けてしまいます。地磁気が微弱なせいですね。ロボカップジュニアサッカーではモーターやキッカー、ドリブラーのアクチュエータが強力な磁場を発生させます。機体サイズが小さいロボカップジュニアではこれらの磁場の影響をもろに受けてしまいます。残念。アクチュエータの動作に応じて磁場が目まぐるしく変化するので補正することも困難だと思います。（やったことない）1度、地磁気を利用して姿勢制御をやってみましたが話にならなかったです。機体の上部、ハンドルに近いところにセンサを取り付けることで磁場の影響を抑えているチームもあるみたいです。個人的には、ハンドルにセンサをつけることは許せないですけど。経験を積むために一度試してみるのは良いと思いますが、実際に使用するには難しいと思います。</p>
+<h3 id="_7">センサフージョンについて</h3>
+<p>ジャイロスコープ、加速度計、磁力計のそれぞれの特徴について軽く解説しました。ロボカップジュニアサッカーではジャイロスコープが有力です。しかし、ジャイロスコープ単体では蓄積していく誤差を補正することができません。そこで、2つ（もしくは3つ）のセンサからの値をあわせて利用する技術があります。</p>
+<h2 id="dmp">DMPについて</h2></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../js/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

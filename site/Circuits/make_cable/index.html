@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>ケーブル作成 - ハードウェア開発 虎の巻</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">ハードウェア開発 虎の巻</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../license/" class="nav-link">License</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Mechanics</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../prepare_now/" class="dropdown-item">準備中</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Circuits</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../before_developing/" class="dropdown-item">電子工作を始める前に</a>
+</li>
+                                    
+<li>
+    <a href="../signal/" class="dropdown-item">デジタル信号とアナログ信号</a>
+</li>
+                                    
+<li>
+    <a href="../microcomputer/" class="dropdown-item">マイコンのすゝめ</a>
+</li>
+                                    
+<li>
+    <a href="../transmission/" class="dropdown-item">通信方式</a>
+</li>
+                                    
+<li>
+    <a href="../motor_driver/" class="dropdown-item">モータードライバ</a>
+</li>
+                                    
+<li>
+    <a href="../ball_sensor/" class="dropdown-item">ボールセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../line_sensor/" class="dropdown-item">ラインセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../imu/" class="dropdown-item">IMU（ジャイロセンサなど）</a>
+</li>
+                                    
+<li>
+    <a href="../kicker/" class="dropdown-item">キッカー</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">ケーブル作成</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Program Intro</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Program-intro/about_c/" class="dropdown-item">C言語という言語について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/hello_world/" class="dropdown-item">Hello World!</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/variables_type/" class="dropdown-item">変数の宣言と型</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/operator/" class="dropdown-item">演算子について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/function/" class="dropdown-item">関数について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/array/" class="dropdown-item">配列について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/structure/" class="dropdown-item">構造体について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/pointer/" class="dropdown-item">ポインタについて</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/dynamic_memory/" class="dropdown-item">動的メモリ確保について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/library/" class="dropdown-item">ライブラリの読み込みについて</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/bit_operator/" class="dropdown-item">ビット演算について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/object_programing/" class="dropdown-item">オブジェクト指向概説</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/inheritance/" class="dropdown-item">継承について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/composition/" class="dropdown-item">時代は継承より合成</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../kicker/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../../Program-intro/about_c/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            
+            
+            
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>自分でケーブルを作れるようになりましょう。僕が引退したあと物理部を少し覗いたらジャンパー線がはんだ付けされていたり、そのままケーブルとして使われているのを目撃したことがありません。良くないですね。自分でケーブルぐらい作れるようにならないとメンテナンス性が下がります。</p>
+<p>ケーブルづくり（カシメとも呼ばれる）とはただの銅線にコネクタを取り付けることで抜き差しのできるケーブルにすることです。例えば、LANケーブルも自作できるみたいです。やったことはありません。</p>
+<p>この資料の最後におすすめのコネクタも紹介します。</p>
+<h3 id="_1">使用するもの</h3>
+<p>ケーブルを作成するには以下のものが必要となります。</p>
+<ul>
+<li>銅線</li>
+<li>ワイヤーストリッパー</li>
+<li>圧着ペンチ</li>
+<li>コンタクト</li>
+<li>ハウジング</li>
+</ul>
+<p>コンタクトとハウジングが良くわからない人もいると思うので、その2つについてまずは解説します。</p>
+<h3 id="_2">ハウジング</h3>
+<p>ハウジングとはケーブルの先端の樹脂の部分のことです。以下の写真はXHコネクタの3ピンのハウジングです。ハウジングの大きな穴に銅線が刺さり、オスのピンが刺さります。</p>
+<h3 id="_3">コンタクト</h3>
+<p>コンタクトとは銅線をハウジングに刺すための金具になります。ハウジングの穴に銅線をただ刺すだけでは抜けてしまいます。コンタクトには爪がついておりその爪がハウジングの溝に引っかかることで抜けないようになります。</p>
+<p>コンタクトの側面を見てください。以下の写真ですね。左側に上方向に高い突起があり、真ん中に低い突起があります。右側は突起と言うよりは周りが1面を除いて覆われているような状態になっています。左側の突起が銅線をコンタクトの溝に沿わせて銅線を差し込んだときに、銅線が抜けないようにしっかりと押さえる部分です。左側の突起は銅線の被覆を抑える必要があります。真ん中の低い突起は被覆ではなく銅線を抑えるためのものです。ここでしっかりと銅線を抑えることで導通します。右側の箱のような部分にはピンが刺さって入るわけです。</p>
+<h3 id="_4">手順</h3>
+<h4 id="1">1. 被覆を剥く</h4>
+<p>先ほど解説したコンタクの溝の真ん中の低い突起の長さ+アルファ程度被覆をむきましょう。<img alt="img" src="../img/%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E4%BD%9C%E3%82%8A1.jpg" /></p>
+<h4 id="2">2. 圧着ペンチにセットする</h4>
+<p>まずコンタクトを圧着ペンチにセットします。圧着ペンチには色々溝がありますがコンタクトの幅より少しきつい程度が良いと思います。キツすぎると圧着したときにコンタクトが壊れるとので注意です。圧着ペンチで先程解説した突起を潰すことで銅線を抑えます。2つある突起のうち被覆を抑える高い突起を先に圧着します。高い突起が垂直ではなく少し開いた状態になっていると思うので垂直になるよう傾きを整えてあげると圧着ペンチにセットしやすいです。セットする際には表裏の向きにも注意してください。逆でやるとうまく圧着できません。<img alt="img" src="../img/%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E4%BD%9C%E3%82%8A2.jpg" /><img alt="img" src="../img/%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E4%BD%9C%E3%82%8A3.jpg" />
+セットできたら1で用意した銅線を差し込みます。長い突起の部分が被覆になるようにちょうどいい感じに差し込んでください。差し込めたらペンチを握りしめて圧着しましょう。次に真ん中の突起も同じ要領で圧着しましょう。この時、コンタクト背面の爪を間違えて潰さないように位置に気をつけてください。爪を潰してしまうとハウジングに刺すことができなくなってしまいます。<img alt="" src="../img/%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E4%BD%9C%E3%82%8A4.jpg" /></p>
+<h4 id="3">3. ハウジングに差し込む</h4>
+<p>圧着できたらハウジングに差し込みます。ハウジングには以下の写真のような溝があるのでその溝に爪が引っかかるように向きを揃えて淹れてください。置くまで差し込んだあとに銅線を軽く引っ張って抜けなければ大丈夫です。<img alt="img" src="../img/%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E4%BD%9C%E3%82%8A5.jpg" /><img alt="img" src="../img/%E3%82%B1%E3%83%BC%E3%83%96%E3%83%AB%E4%BD%9C%E3%82%8A6.jpg" /></p>
+<h3 id="_5">コネクタに関する注意</h3>
+<p>銅線を引っ張ってコネクタを抜いている人を良く見かけますがやってはいけないことです。特に良く使われているXHコネクタはそこそこ抜くのに力が必要となるので、そのような抜き方をしてしまうと銅線にかなり負荷がかかります。必ず樹脂部分（ハウジング）を持って引っ張って抜いてください。</p>
+<p>また、コネクタを多用するようになるとケーブルの両端の配線順のミスで、想定外の接続となってしまい、うまく動作しなかったりショートしたりしてしまうことがあります。こういったミスをなくすためにもケーブルを使う際のルールを決めておくと良いと思います。個人的に必ず守っていることを記しておきます。</p>
+<ul>
+<li>電源ピンの位置を固定する<ul>
+<li>例えば、一番左側は必ずグラウンド、+電源が必要なときは一番右側にするなど</li>
+</ul>
+</li>
+<li>銅線の両端を同じところに接続する<ul>
+<li>例えば、片方のハウジングの一番右側に指した銅線をもう一方のハウジングの一番右側以外に刺すことは絶対にせず一番右側に刺す</li>
+<li>要はケーブルの中で銅線たちをクロスさせない</li>
+<li>何が良いのかと言うと、同じピン数だけど使用する場所が違うコネクタを間違えて指しても正しく機能するようになります</li>
+</ul>
+</li>
+</ul>
+<h3 id="_6">おすすめコネクタ</h3>
+<p>ロボカップサッカーを行う上で最低限知っておくべきコネクタを2つ紹介します。</p>
+<ul>
+<li><a href="https://akizukidenshi.com/catalog/g/g112255/">XHコネクタ</a><ul>
+<li>ピンピッチ（ピン同士の間隔））が2.5mmなのでユニバーサル基板に刺さる（ユニバーサル基板のピンピッチは2.54mmのハズ）</li>
+<li>しっかりロックされる<ul>
+<li>むしろ抜きづらい</li>
+</ul>
+</li>
+<li>定格3AまでOK<ul>
+<li>5Aとかまで耐えると思います</li>
+</ul>
+</li>
+<li>信号線にしては大きいと思う<ul>
+<li>高密度基板を作るときは結構スペースを食う</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>PHコネクタ</p>
+<ul>
+<li>ピンピッチが2.0mmなので小型</li>
+<li>
+<p>自然にコネクタが抜けることは無い</p>
+</li>
+<li>
+<p>信号線であればこれで十分</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>補足として自分で圧着することは無いけど使えるコネクタも解説します。</p>
+<ul>
+<li>リボンケーブル<ul>
+<li><a href="https://akizukidenshi.com/catalog/g/g103796/">こういうやつ</a>です</li>
+<li>ピン数が多いので大量に信号線を共有したいときにはおすすめです</li>
+<li>コネクタが結構でかいです</li>
+</ul>
+</li>
+<li>Tコネクタ<ul>
+<li><a href="https://akizukidenshi.com/catalog/g/g113420/">これ</a>と<a href="https://akizukidenshi.com/catalog/g/g113434/">これ</a>ですね</li>
+<li>Li-Poで使われていると思います</li>
+<li>大電流を流すことができるので電源周りに使いましょう<ul>
+<li>むしろXHコネクタなどでロボットの電源を賄っていたら終わっているのでやめましょう</li>
+<li>Tコネクタから来た電源をXHコネクタで複数の箇所に分けるといった使い方が良いと思います</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>XTコネクタ<ul>
+<li><a href="https://akizukidenshi.com/catalog/g/g117950/">これ</a>などです<ul>
+<li>ラインナップが多いので自分で確認してみましょう</li>
+</ul>
+</li>
+<li>注意点はTコネクタと同じです</li>
+</ul>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../js/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

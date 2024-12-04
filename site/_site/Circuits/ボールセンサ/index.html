@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../../img/favicon.ico">
+        <title>ボールセンサ - ハードウェア開発 虎の巻</title>
+        <link href="../../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../../css/brands.min.css" rel="stylesheet">
+        <link href="../../../css/solid.min.css" rel="stylesheet">
+        <link href="../../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../../..">ハードウェア開発 虎の巻</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../../license/" class="nav-link">License</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Mechanics</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../prepare_now/" class="dropdown-item">準備中</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Circuits</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Circuits/before_developing/" class="dropdown-item">電子工作を始める前に</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/signal/" class="dropdown-item">デジタル信号とアナログ信号</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/microcomputer/" class="dropdown-item">マイコンのすゝめ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/transmission/" class="dropdown-item">通信方式</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/motor_driver/" class="dropdown-item">モータードライバ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/ball_sensor/" class="dropdown-item">ボールセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/line_sensor/" class="dropdown-item">ラインセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/imu/" class="dropdown-item">IMU（ジャイロセンサなど）</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/kicker/" class="dropdown-item">キッカー</a>
+</li>
+                                    
+<li>
+    <a href="../../../Circuits/make_cable/" class="dropdown-item">ケーブル作成</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Program Intro</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../../Program-intro/about_c/" class="dropdown-item">C言語という言語について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/hello_world/" class="dropdown-item">Hello World!</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/variables_type/" class="dropdown-item">変数の宣言と型</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/operator/" class="dropdown-item">演算子について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/function/" class="dropdown-item">関数について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/array/" class="dropdown-item">配列について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/structure/" class="dropdown-item">構造体について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/pointer/" class="dropdown-item">ポインタについて</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/dynamic_memory/" class="dropdown-item">動的メモリ確保について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/library/" class="dropdown-item">ライブラリの読み込みについて</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/bit_operator/" class="dropdown-item">ビット演算について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/object_programing/" class="dropdown-item">オブジェクト指向概説</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/inheritance/" class="dropdown-item">継承について</a>
+</li>
+                                    
+<li>
+    <a href="../../../Program-intro/composition/" class="dropdown-item">時代は継承より合成</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            
+            
+            
+            
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>著者：根岸孝次</p>
+<p>ロボカップジュニアライトウェイトに出るにはマストとなるボールセンサについて解説します。ボールセンサと言っていますが、1つのセンサではなく、正確には多数の赤外線センサが集まったモージュルです。そこのところを履き違えないようにしてください。
+<img alt="img|278" src="https://www.elekit.co.jp/product/assets_c/2015/10/RCJ-05_normal-thumb-960xauto-740.jpg" /></p>
+<div style="font-size: 0.5em">出典:https://www.elekit.co.jp/product/assets_c/2015/10/RCJ-05_normal-thumb-960xauto-740.jpg</div>
+
+<h3 id="_1">赤外線センサ</h3>
+<p>残念ながら人間の目には赤外線が見えないのでセンサを使います。（そもそも人間に見えてもセンサを使うことには変わりないか）ボールが発行する赤外線の特徴や赤外線センサの特徴などを解説すると非常に疲れるのでこの資料では割愛します。気になる人は<a href="https://yunit.techblog.jp/archives/72016450.html">このサイト</a>を参考にすると良いと思います。</p>
+<p>私がおすすめするのは<a href="https://www.google.com/search?q=tssp58038&amp;sourceid=chrome&amp;ie=UTF-8">TSSP58038</a>です。先ほど紹介したサイトで理由は説明されているので割愛します。岡田先生の誤発注により物理部には大量に在庫があると思います。これを使いましょう。</p>
+<p>ロボカップで赤外線センサを用いてボールをセンシングする方法として2種類あります。「パルス幅を監視する方法」と「ローパスフィルタを通してアナログ入力で監視する方法」です。この資料では後者を扱います。おそらく後者のほうがメジャーだと思いますし、簡単なのでこちらを採用します。</p>
+<h3 id="_2">ローパスフィルタ</h3>
+<p>ローパスフィルタは「<strong>低い周波数の信号を通し、高い周波数の信号をブロックする</strong>」働きをする電子回路の一種です。名前の通り、「ロー（Low）」＝低い、「パス（Pass）」＝通す、「フィルタ（Filter）」＝フィルタの役割をします。</p>
+<p>音やデータ信号など、いろいろな種類の信号には「周波数」というものがあり、周波数は信号の「速さ」を表します。たとえば音楽の信号だと、低い周波数の音は「低音」に、高い周波数の音は「高音」に対応しています。</p>
+<h4 id="_3">必要性</h4>
+<p>ローパスフィルタは、例えばノイズを減らしたいときに使います。ノイズは信号に混ざってしまう「不必要な高い周波数」のことが多いので、ローパスフィルタを使うことで高い周波数の成分を取り除き、必要な低い周波数だけを取り出すことができます。</p>
+<p>また、音楽や音声の回路では、雑音や不要な周波数が音に悪影響を及ぼすのを防ぐためにも使われます。</p>
+<h4 id="_4">ローパスフィルタの構成要素</h4>
+<p>ローパスフィルタは、主に「抵抗（Resistor）」と「コンデンサ（Capacitor）」で作られます。具体的には、抵抗とコンデンサを直列に接続し、コンデンサの片方の端をグラウンド（基準電位）に接続する簡単な回路です。このような回路は「RCローパスフィルタ」とも呼ばれます。
+<img alt="img|367" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Low_pass_filter.svg/600px-Low_pass_filter.svg.png" /></p>
+<div style="font-size: 0.5em">出典:https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Low_pass_filter.svg/600px-Low_pass_filter.svg.png</div>
+
+<ul>
+<li>抵抗（R）<ul>
+<li>電流の流れを制限する役割を持ち、値が大きいほど電流を通しにくくします。</li>
+</ul>
+</li>
+<li>コンデンサ（C）<ul>
+<li>電気を一時的に蓄えたり放出したりする役割があり、信号の変化をなだらかにします。</li>
+</ul>
+</li>
+</ul>
+<h4 id="_5">ローパスフィルタの動作原理</h4>
+<p>ローパスフィルタの動作を理解するためには、まず「周波数」と「リアクタンス（抵抗とは異なる特性で、周波数に応じて変化するコンデンサやコイルの性質）」を簡単に知っておくと役立ちます。イメージだけ以下にまとめました。</p>
+<ul>
+<li>低周波数<ul>
+<li>コンデンサは低周波数では信号を通すのを妨げません。そのため、低周波数の成分が回路を通過します。</li>
+</ul>
+</li>
+<li>高周波数<ul>
+<li>高周波数ではコンデンサがより強く信号を通しにくくなるため、信号が減衰（弱まること）されて通過しにくくなります。
+結果として、低周波数の信号は通過し、高周波数の信号は抑えられることになります。</li>
+</ul>
+</li>
+</ul>
+<h4 id="_6">カットオフ周波数とは？</h4>
+<p>ローパスフィルタには「カットオフ周波数」という値があります。カットオフ周波数は、「どの周波数までを通過させ、どの周波数からをブロックするか」の境目を表す周波数です。この周波数は、抵抗値（R [Ω]）とコンデンサの容量（C [F]）で決まります。
+$$
+f_c = \frac{1}{2 \pi RC} \mathrm{\, \left[Hz\right]}
+$$
+ここで、Rが大きいほどカットオフ周波数は低くなり、Cが大きいほど同様に低くなります。</p>
+<h4 id="_7">ローパスフィルタの実際の使い方</h4>
+<ul>
+<li>オーディオアンプ<ul>
+<li>音楽を再生するとき、不要な高周波ノイズを除去して、音質をクリアにするために使われます。</li>
+</ul>
+</li>
+<li>センサー信号処理<ul>
+<li>モータやセンサーから得られる信号がガタガタしたりノイズが入る場合、その高周波成分を除去して滑らかな信号にします。</li>
+</ul>
+</li>
+<li>電源回路の平滑化<ul>
+<li>電源に混入するノイズを除去し、安定した電圧を供給するために使われます。</li>
+</ul>
+</li>
+</ul>
+<h4 id="_8">自分で作ってみよう！</h4>
+<p>簡単なRCローパスフィルタを作ってみると、実際にどのように信号が変わるか体験できます。以下のような部品を用意しましょう：</p>
+<ul>
+<li>抵抗器（たとえば10kΩ）</li>
+<li>コンデンサ（たとえば0.1μF）</li>
+</ul>
+<p>回路を組み立て、入力側に信号（例えばPWM）を加え、出力側の信号がどのように変わるかをオシロスコープで確認すると、低い周波数が通過し、高い周波数が減衰する様子が観察できます。
+※ オシロスコープは高価なので岡田先生に使い方を聞きましょう</p>
+<h4 id="_9">ボールセンサではどのように使うか</h4>
+<p>長々とローパスフィルタを解説してきましたが実際にどのように使うか解説していきます。ボールから送られてくる赤外線はセンサを通してパルス幅で出力されます。このパルス幅の変化を見るコートでボールの位置を割り出せます。しかし、Arduinoでこれを行うのは少しむずかしいです。そこで、ローパスフィルタを通してパルス幅の変化を電圧変化に変換します。使用する抵抗値は4.7kΩ、コンデンサの静電容量は10µFです。
+![[赤外線センサ1.png|401]]
+回路CADでかいてみた回路が上の画像です。抵抗値とコンデンサの容量が異なっていますが多分どちらでも動くと思います。画像の中心あたりの長方形のシンボルが赤外線センサTSSP58038です。
+- TSSP58038
+    - OUT
+        - 出力ピン
+        - ボールから受信したパルス幅が出力される
+    - VS
+        - 電源（3.3V）
+    - GND
+        - グラウンド
+画像のIR0という部分をマイコンのアナログ入力で電圧を計測することでボールを探せます。出力電圧Vとボールとの距離lが一次関数で表せるので傾きと切片を実験で求めて上げれば大体の距離が算出できるようになります。</p>
+<h3 id="_10">ボールセンサを作る</h3>
+<p>赤外線センサとローパスフィルタを組み合わせて使う方法を解説してきました。ここからはそれを使ってボールセンサを作る方法を解説します。</p>
+<h3 id="_11">角度を求める</h3>
+<p>赤外線センサの出力電圧がボールからの距離に比例するという前提のもとで考えていきます。</p>
+<p>簡略化のためにセンサ数 <span class="arithmatex">\(n = 4\)</span>の場合で解説します。機体の中心を原点とした<span class="arithmatex">\(xy\)</span>平面を考えます。赤外線センサ4個を半径<span class="arithmatex">\(r\)</span>で等間隔に配置します。（それぞれが軸上に来るように配置するのが素直だと思います。）ボールの位置（<span class="arithmatex">\(x_b\)</span>, <span class="arithmatex">\(y_b\)</span>）、センサ<span class="arithmatex">\(i\)</span>の出力電圧から算出したボールまでの距離を<span class="arithmatex">\(l_i\)</span>とします。ボールが第一象限にある場合、センサ<span class="arithmatex">\(1, 2\)</span>からボールまでの距離<span class="arithmatex">\(l_1, l_2\)</span>が有効です。（本来センサ<span class="arithmatex">\(3, 4\)</span>からはボールが見えないはずです。）</p>
+<p>ボールまでのベクトルが<span class="arithmatex">\(x\)</span>軸となす角<span class="arithmatex">\(\theta\)</span>は<span class="arithmatex">\(tan\)</span>の逆関数<span class="arithmatex">\(arctan\)</span>を用いれば、
+$$
+\theta = arctan(\frac{l_2+r}{l_1+r})
+$$
+となるはずです。センサの位置と向きの関係で、<span class="arithmatex">\(l_1, l_2\)</span>を<span class="arithmatex">\(x, y\)</span>軸の成分に分解する必要が無いので非常にシンプルな結果になります。また、機体中心からボールまでの距離<span class="arithmatex">\(R\)</span>は、
+$$
+R = \sqrt{(l_1 + r)^2 + (l_2 + r)^2}
+$$
+となります。（当然）
+<span class="arithmatex">\(arctan\)</span>には慣れていないと思いますが、他の部分は非常に基礎的な内容なので理解しやすいのではないでしょうか？</p>
+<p><span class="arithmatex">\(n=4\)</span> では、円形ボールセンサの強みが殆どないので、一般化します。センサ<span class="arithmatex">\(i\)</span>が座標<span class="arithmatex">\(\left(r \cos\left(i * \frac{2 \pi}{n}\right), r \sin\left(i * \frac{2 \pi}{n}\right) \right) \quad (0 \leq i \leq n - 1)\)</span> に配置されているとします。センサ<span class="arithmatex">\(i\)</span>の出力電圧から求めたボールまでの距離を<span class="arithmatex">\(l_i\)</span>とします。この時、センサ<span class="arithmatex">\(i\)</span>からボールまでのベクトルを成分表示すると、<span class="arithmatex">\(\left(l_i \cos\left(i * \frac{2 \pi}{n}\right), l_i \sin\left(i * \frac{2 \pi}{n}\right)\right)\)</span>となります。ここで、ボールの方向と逆方向にあるセンサたちの値は信用できません。そこで、ボールの方向にある<span class="arithmatex">\(m\)</span>個のセンサの結果だけを利用することにします。ここでは、センサ<span class="arithmatex">\(s_1, s_2, ..., s_m\)</span>の値を利用するとしましょう。センサ<span class="arithmatex">\(i\)</span>の位置ベクトルが<span class="arithmatex">\(\left(r \cos\left(i * \frac{2 \pi}{n}\right), r \sin\left(i * \frac{2 \pi}{n}\right) \right)\)</span>であったことに注意して、ボールの<span class="arithmatex">\(x成分, y成分\)</span>を足し合わせましょう。
+$$
+x_{sum} = \sum_{i = 1}^{m}\left(r + l_{s_{i}}\right) \cos\left(s_i * \frac{2 \pi}{n}\right)
+$$
+$$
+y_{sum} = \sum_{i = 1}^{m}\left(r + l_{s_{i}}\right) \sin\left(s_i * \frac{2 \pi}{n}\right)
+$$
+最後に、<span class="arithmatex">\(theta\)</span>と<span class="arithmatex">\(R\)</span>を求めてあげればボールのおおよその位置を求めることができます。
+$$
+\theta = \arctan\left(\frac{y_{sum}}{x_{sum}}\right), \quad R = \sqrt{x_{sum}^2 + y_{sum}^2}
+$$
+<span class="arithmatex">\(\theta\)</span>はかなり精度が出ますが、赤外線ボールの構造上、ボールの角度によって<span class="arithmatex">\(\pm10\)</span>度ほどズレた気がします。<span class="arithmatex">\(R\)</span>はかなりあてにならなかった気がします。詳しいことは<a href="https://blackbox-crusher.hatenablog.com/entry/2021/08/24/190611">ここ</a>で解説されてます。</p>
+<p>経験から、センサの個数は8~16個程度が良いと思います。それ以上センサを配置しても負担が増えるだけで精度はさほど向上しないです。また、アナログ入力でセンサの出力電圧を監視するので、マイコンのアナログ入力数が足りない問題があれば、ラインセンサの資料で解説している<a href="https://www.ti.com/product/ja-jp/CD74HC4067">アナログマルチプレクサ CD74HC4067</a>を利用してみると良いと思います。</p>
+<h3 id="_12">補正をする</h3>
+<p>先程も触れましたがボールの性質上、ボールの角度によって<span class="arithmatex">\(theta,R\)</span>がかなりブレることがあります。これでは困るのでプログラムを工夫して、ブレを抑える必要があります。この資料では、<strong>移動平均</strong>について扱います。</p>
+<h4 id="_13">移動平均フィルタの原理</h4>
+<p>移動平均フィルタは、一定数の過去データの平均をとることで、値の変動を滑らかにするフィルタです。例えば、最新の<span class="arithmatex">\(n\)</span>点のデータを利用する場合、次のように計算します：
+  $$
+ \theta_{filtered} = \frac{1}{n}\sum_{i=0}^{n-1} \theta_i \quad※
+ $$
+ $$
+ R_{filtered} = \frac{1}{n}\sum_{i=0}^{n-1} R_i
+ $$
+ここで、<span class="arithmatex">\(n\)</span>はフィルタのウィンドウ幅（データの数）です。ウィンドウ幅が大きいほど滑らかになりますが、応答が遅くなる可能性もあるため、適切なウィンドウ幅を選ぶ必要があります。</p>
+<h4 id="_14">注意点</h4>
+<ul>
+<li><strong>角度のラップアラウンド問題（※）</strong><ul>
+<li>θが360度（または2πラジアン）を超えるときに0に戻るため、直接移動平均を計算すると急激な変化が誤差として現れる可能性があります。</li>
+<li>円周方向の平均などの手法があるようです</li>
+</ul>
+</li>
+<li>直線フィルタ vs 極座標フィル<ul>
+<li>場合によっては、極座標での移動平均よりも、x-y座標に変換してから移動平均を計算し、再度極座標に戻すほうが安定することがあります。</li>
+</ul>
+</li>
+</ul>
+<h4 id="_15">その他のフィルタ</h4>
+<ul>
+<li>指数移動平均（Exponential Moving Average, EMA）<ul>
+<li>EMAは過去のデータよりも最新のデータに重みを置くことで、ブレを抑えながらも反応性の高いフィルタリングが可能です。移動平均よりも即時応答が得られるため、リアルタイム性が求められる場合に適しています。</li>
+</ul>
+</li>
+<li>カルマンフィルタ<ul>
+<li>状態推定を行うカルマンフィルタは、ノイズの分散を考慮して、観測データと予測値を組み合わせて最適な推定を行います。Rとθに対しても適用可能で、過去の傾向やノイズモデルに基づいてより安定した値を得られます。</li>
+</ul>
+</li>
+<li>メディアンフィルタ<ul>
+<li>メディアンフィルタは、短期的な大きな変動やノイズを除去するのに有効です。例えば、過去の数点の中央値を取ることで一時的なノイズを抑えますが、移動平均よりも応答が鈍くなる場合があります。</li>
+</ul>
+</li>
+</ul>
+<p>それぞれのフィルタにはメリットとデメリットがあり、目的や求める精度によって使い分けることが推奨されます。まずは移動平均や指数移動平均で試してみるのが良いと思います。</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../../js/base.js"></script>
+        <script src="../../../js/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

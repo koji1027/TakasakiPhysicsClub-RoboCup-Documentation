@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>ラインセンサ - ハードウェア開発 虎の巻</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">ハードウェア開発 虎の巻</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../license/" class="nav-link">License</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Mechanics</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../prepare_now/" class="dropdown-item">準備中</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Circuits</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../before_developing/" class="dropdown-item">電子工作を始める前に</a>
+</li>
+                                    
+<li>
+    <a href="../signal/" class="dropdown-item">デジタル信号とアナログ信号</a>
+</li>
+                                    
+<li>
+    <a href="../microcomputer/" class="dropdown-item">マイコンのすゝめ</a>
+</li>
+                                    
+<li>
+    <a href="../transmission/" class="dropdown-item">通信方式</a>
+</li>
+                                    
+<li>
+    <a href="../motor_driver/" class="dropdown-item">モータードライバ</a>
+</li>
+                                    
+<li>
+    <a href="../ball_sensor/" class="dropdown-item">ボールセンサ</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">ラインセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../imu/" class="dropdown-item">IMU（ジャイロセンサなど）</a>
+</li>
+                                    
+<li>
+    <a href="../kicker/" class="dropdown-item">キッカー</a>
+</li>
+                                    
+<li>
+    <a href="../make_cable/" class="dropdown-item">ケーブル作成</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Program Intro</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Program-intro/about_c/" class="dropdown-item">C言語という言語について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/hello_world/" class="dropdown-item">Hello World!</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/variables_type/" class="dropdown-item">変数の宣言と型</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/operator/" class="dropdown-item">演算子について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/function/" class="dropdown-item">関数について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/array/" class="dropdown-item">配列について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/structure/" class="dropdown-item">構造体について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/pointer/" class="dropdown-item">ポインタについて</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/dynamic_memory/" class="dropdown-item">動的メモリ確保について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/library/" class="dropdown-item">ライブラリの読み込みについて</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/bit_operator/" class="dropdown-item">ビット演算について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/object_programing/" class="dropdown-item">オブジェクト指向概説</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/inheritance/" class="dropdown-item">継承について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/composition/" class="dropdown-item">時代は継承より合成</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../ball_sensor/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../imu/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">物体の色が見える仕組み</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">フォトトランジスタについて</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_9" class="nav-link">ラインセンサの概観</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_10" class="nav-link">回路</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_13" class="nav-link">プログラム</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_16" class="nav-link">補足事項</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>著者：根岸孝次</p>
+<p>ロボカップでアウトオブバウンズを防ぐために必須なラインセンサの原理、作り方をまとめました。</p>
+<h2 id="_1">物体の色が見える仕組み</h2>
+<p>私たちの目に映る物体の色は、光の反射によって生まれます。この原理を理解することは、ラインセンサの仕組みを理解する基礎となります。</p>
+<h3 id="_2">光の反射と色の関係</h3>
+<p>白色光（太陽光や蛍光灯など）には、赤(R)、緑(G)、青(B)の3原色が含まれています。物体に白色光が当たると、物体の性質によって特定の色の光だけが反射され、その他の色は吸収されます。
+以下のような反射の特徴があります。
+- 赤い物体は、赤い光だけを反射し、他の色を吸収します
+- 黄色い物体は、赤と緑の光を反射します
+- 白い物体は、すべての色（赤、緑、青）を反射します
+- 黒い物体は、ほとんどすべての光を吸収します
+- <img alt="img|483" src="https://www.cataler.co.jp/train/qa/images/education_01.jpg" /></p>
+<div style="font-size: 0.5em">出典:https://d2u1z1lopyfwlx.cloudfront.net/thumbnails/ab28ae92-0b58-5152-9852-df79e765d10e/4c6a6ffa-d96c-59d8-8f04-b51ed2860a62.jpg</div>
+<h3 id="_3">センサへの応用</h3>
+<p>この色の原理は、カラーセンサの設計に直接応用されています。カラーセンサは人間の目と同じように、物体から反射された光のRGB成分を検出します。
+具体的には、
+1. センサが白色光を物体に照射します
+2. 物体から反射された光をRGB各色に分けて検出します
+3. 各色の反射量の比率から物体の色を判定します3</p>
+<p>このような原理を応用することで、ラインセンサは移動する物体の色情報を正確に読み取ることができます。
+<img alt="img|445" src="https://www.rohm.co.jp/documents/11401/7457285/img_01.jpg/b89a1cdf-9013-331c-aa29-bd8f21574fd1?t=1576203765973" /></p>
+<div style="font-size: 0.5em">出典:https://www.rohm.co.jp/documents/11401/7457285/img_01.jpg/b89a1cdf-9013-331c-aa29-bd8f21574fd1?t=1576203765973</div>
+<h3 id="led">ロボカップで使うLEDの色</h3>
+<p>ロボカップサッカーではコートの緑色と白線が区別できれば十分です。上述のような様々な色を見分けられる必要は無く、このセンサを実装するのは過剰です。（サッカーコートのゴールの色は距離が遠すぎるのでこの方式のカラーセンサでは認識できません。カメラを利用してください。）</p>
+<p>我々が作るラインセンサは緑色と白色が区別できれば十分だとわかりました。では、そのためにもっとも効果的な方法を考えましょう。例えば、緑色が0(LOW)で、白色が1(HIGH)になったら嬉しいのではないでしょうか？以下ではそうなるようにセンサを考えてみます。</p>
+<p>白色はすべての色を反射します。基本的にどんな色を照射しても強く反射されるのでセンサは1(HIGH)を得ます。一方、緑色は緑色を一番強く反射し、赤色と青色を吸収してしまいます。色相環を見れば緑色の捕食が赤色になっていることがわかります。つまり、例えば赤色を照射してあげれば0(LOW)となると考えられます。
+<img alt="img|293" src="https://zokeifile.musabi.ac.jp/wpwp/wp-content/uploads/2014/08/059_hue-circle_01.jpg" /></p>
+<div style="font-size: 0.5em">出典:https://zokeifile.musabi.ac.jp/%E8%89%B2%E7%9B%B8%E7%92%B0/</div>
+<p>※「○」は反射する。「✕」は吸収する。</p>
+<p>実際にロボカップのラインセンサでは赤色光をコートに照射しその反射光の強さを測定することでコート上にいるのかライン上にいるのか判別します。青色も良さそうに思えますがおすすめできません。<strong>ロボカップサッカーでは一方のコートの色として青色が採用されており、ロボットに青色の部分があることが許されていないためです。</strong> また、コートに照射して反射された光が減衰したり、ロボットの外に漏れてしまわないようにLEDとセンサは地面すれすれにつけます。（あまりに地面すれすれにするのは良くないのは言うまでもありません。）</p>
+<h2 id="_4">フォトトランジスタについて</h2>
+<p>先ほどから光の強度を測定するとずっと言っていますが、センサについて何も解説していなかったのでここで解説します。ラインセンサには<strong>フォトトランジスタ</strong>を利用します。
+<img alt="img|179" src="https://akizukidenshi.com/img/goods/L/127315.jpg" /></p>
+<div style="font-size: 0.5em">出典:https://akizukidenshi.com/img/goods/L/127315.jpg</div>
+<h3 id="_5">基本構造と動作原理</h3>
+<p>フォトトランジスタは、光を電気信号に変換する半導体素子で、フォトダイオードとトランジスタを組み合わせた構造を持っています。</p>
+<h3 id="_6">光電流の発生と増幅</h3>
+<ul>
+<li>フォトトランジスタに光が当たると、内部のフォトダイオード部分で光電流が発生します。</li>
+<li>発生した光電流はNPNトランジスタのベースに流れ込み、hFE倍（数百倍）に増幅されて出力されます。</li>
+</ul>
+<h3 id="_7">特性と性能</h3>
+<ul>
+<li>電流特性<ul>
+<li>暗状態（光が当たっていない時）: 暗電流 約10^-9 A</li>
+<li>光照射時: 光電流 数mA</li>
+<li>この電流レベルの大きな差（約10^6倍）を利用して、物体の検出が可能</li>
+</ul>
+</li>
+</ul>
+<h3 id="_8">回路での使用方法</h3>
+<p>一般的な使用例として
+- 光が当たっていない時は電流が流れず、後段のトランジスタは0(LOW)
+- 光が当たると電流が流れ、後段のトランジスタがオンになる1(HIGH)</p>
+<h2 id="_9">ラインセンサの概観</h2>
+<ul>
+<li>LEDを利用して地面に赤色LEDを照射する<ul>
+<li>普通のLEDでも多分大丈夫だが高輝度LEDというものをつかうと良いかも<ul>
+<li>光があまりにも強いとLEDからの光が直接フォトトランジスタに入ってしまって線sなとして機能しない。場合によっては直接光が入らないようにカバーを付ける必要がある。</li>
+<li>高輝度なLEDほど指向性が強い。（光がまっすぐに出てくる。広がらない）LEDとフォトトランジスタの角度をあわせないと反射光がうまく入射してくれない。</li>
+<li>例えば<a href="https://akizukidenshi.com/catalog/g/g105022/">これ</a><ul>
+<li>適当に秋月電子で探したやつだからロボカップで使えるとは一言も言っていない</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>私は、Neopixelを利用した<ul>
+<li>マイコン内蔵LEDと呼ばれており、色と輝度をプログラムで調整できる。</li>
+<li>信号線が1本で済む。数珠つなぎできる。</li>
+<li>いっぱい搭載して最高輝度で光らせていたらかなり消費電力が大きかった。</li>
+<li>フルカラーなので遊べて楽しい。</li>
+<li>はんだ付けが難しい。</li>
+<li>まさに<a href="https://akizukidenshi.com/catalog/g/g107915/">これ</a>を使っていた</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_10">回路</h2>
+<p>この資料で扱う部品構成は以下のとおりです。真似する場合には参考にしてください。</p>
+<ul>
+<li><a href="https://akizukidenshi.com/catalog/g/g107915/">WS2812B</a><ul>
+<li>いわゆるNeopixel</li>
+<li>輝度や色を変えられるのでコートや外の光に応じてラインセンサを調節できる。プログラムの項で触れるしきい値を変えなくてもLED側の輝度や色で対応できることもある。</li>
+<li>普通のLEDより制御は難しいので初めて作ってみるならLEDをおすすめする</li>
+</ul>
+</li>
+<li><a href="https://akizukidenshi.com/catalog/g/g102325/">NJL7502L</a><ul>
+<li>フォトトランジスタ</li>
+<li>ロボカップ界隈で最もメジャー</li>
+<li>安くは無いがSSH予算を使えばそんなことはどうでも良い</li>
+</ul>
+</li>
+<li>抵抗 10kΩ<ul>
+<li>フォトトランジスタに挟む抵抗</li>
+<li>100kΩを使用しているチームもあるが、私達は10kΩでうまく言っているのでこれをおすすめしておく</li>
+</ul>
+</li>
+</ul>
+<p><strong>※補足 上位に食い込みたいなら大事かも</strong>
+原理の説明の際に、白色でHIGH、緑色でLOWと説明したのでデジタル入力を使用すれば判別できるはずである。しかし、LEDやフォトトランジスタ、環境の影響で緑色でもHIGHになったり、逆に白色でもLOWとなってしまうことが多々ある。この場合、デジタル入力では判別でいないのでアナログ入力を使うことになる。そこで問題になってくるのがアナログ入力数である。強いチームではフォトトランジスタを1台あたり30個とか使う。（私達のチームでは32個使っていました。かなり多い方。）一方、マイコンのアナログ入力できるピン数は多くても10とかである。そこで、アナログマルチプレクサというものが必要になる。</p>
+<p>アナログマルチプレクサとは、複数のアナログ信号を1つのアナログ入力で読むためのICである。（本来の用途がこれなのかは知らないがロボカップではこのように使う。アナログ出力でも利用できそうだが使ったことは無い。）アナログマルチプレクサには、主に以下のピンが生えている。</p>
+<ul>
+<li>入力ピン（複数）<ul>
+<li>監視したいアナログ信号を入力するピン</li>
+<li>今回の場合、ここに各フォトトランジスタの適切な部分を接続していく</li>
+<li>各入力ピンには0~n番と名前がついているはず</li>
+</ul>
+</li>
+<li>COMピン<ul>
+<li>マイコンのアナログ入力につなぐピン</li>
+<li>入力ピンの中から選択されたピンがCOMピント接続されるので、電圧を測定できる</li>
+</ul>
+</li>
+<li>選択ピン（複数）<ul>
+<li>どの入力ピンをCOMピンと接続するかを選択する</li>
+<li>各ピンの状態から入力ピンを選択する。2進数を用いる。i番目の選択ピンがiビット目になり、各ピンの状態で表現された数字と対応した入力ピンが選択される。</li>
+</ul>
+</li>
+<li>イネーブルピン<ul>
+<li>このピンでアナログマルチプレクサ自体のON/OFFを選択できる</li>
+<li>HIGHにするべきか、LOWにするべきかはデータシートを参照しなくてはならない</li>
+<li>無いモデルもあるかも</li>
+</ul>
+</li>
+</ul>
+<p>実際に私達が使用したアナログマルチプレクサは<a href="https://www.amazon.co.jp/ACEIRMC-CD74HC4067-%E3%82%A2%E3%83%8A%E3%83%AD%E3%82%B0%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB%E3%83%9E%E3%83%AB%E3%83%81%E3%83%97%E3%83%AC%E3%82%AF%E3%82%B5%E3%83%BC-%E3%83%96%E3%83%AC%E3%83%BC%E3%82%AF%E3%82%A2%E3%82%A6%E3%83%88%E3%83%9C%E3%83%BC%E3%83%89%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB-%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%B3%E3%83%B3%E3%83%88%E3%83%AD%E3%83%BC%E3%83%A9%E3%83%BC%E7%94%A8/dp/B08XV26WPS?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&amp;crid=SRR4KIJG62KF&amp;dib=eyJ2IjoiMSJ9.JRoWZINWXAOZcWS5Tj3dtA5c94ew5pYxcjQV_IVTvu8F5sC56VkssxTmrlMCWVDBx4yw6iGdTRwWGiy5USIzlgqM4aLjNA8Vl0AOsUVEK41Sa-E7V5CKHT7FsGl2lTMNnNaIoaMxVEpCv5c09e7jCEPGLglIik7vav25qpNwkgtYe1ktTwzar-9dirqJ_Wzt5bMxeBD2ti4xbPKpC2iTIJnaXuwWEY3vqwA-YM89z0KD8kwWtN9sdXOqlT5-vvwk_dG1Xim5gIUfhWzZwImlUUOxTMncPeEGmHkB71nfQ8M.S0mZjXEGzbX4ygyaBv_WaCuU8uymZA8rNEHv_s6Micw&amp;dib_tag=se&amp;keywords=cd74hc4067&amp;qid=1730547278&amp;sprefix=cd74hc406,aps,161&amp;sr=8-5">CD74HC4067</a>です。Amazonでモジュールで販売されていたやつをハンダごてで熱して外して自分たちの基板に取り付けていました。digikeyなどで部品単体として販売されているのでそれを買ってもいいのですが、Amazonのやつは異様に安かったのでこっちを使いました。偽物説もかなり濃厚ですが動いているのでこれを使っていました。</p>
+<p>（<strong>補足終わり</strong>）</p>
+<h3 id="led_1">LED部分</h3>
+<h3 id="neopixel">Neopixel</h3>
+<p><img alt="img" src="../img/ws2812b_1.jpg" />
+Neopixelには4つの端子があります。上の画像は回路CADでのシンボルです。</p>
+<ul>
+<li>VDD<ul>
+<li>電源入力ピン</li>
+<li>3.3Vでは動かないので5Vを入力する<ul>
+<li>マイコンが3.3V駆動であっても5Vを入力する。信号はマイコンから一方的に送るのでマイコンに逆流して壊れることは無い。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>DOUT<ul>
+<li>信号出力</li>
+<li>次のNeopixelに信号を伝達する<ul>
+<li>次のNeopixelのDINにつないでやれば良い</li>
+<li>Neopixelは数珠つなぎになっていて、各Neopixelは受け取ったデータから自分に関するデータだけ抜き出した残りを次のマイコンへと伝える仕組みになっている</li>
+<li>Neopixelの接続と配置を工夫すると配線が楽になる。何も考えないで配置するとひどいことになる。（当たり前）</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>VSS<ul>
+<li>グラウンド</li>
+<li>聞き慣れないと思うがGNDをVSSと書くこともある</li>
+</ul>
+</li>
+<li>DIN<ul>
+<li>信号入力</li>
+<li>前のNeopixelのDOUTとつなぐ</li>
+<li>先頭のNeopixelはマイコンとつないでやれば良い<ul>
+<li>マイコンのどのピンでも基本的に制御できたはず
+<img alt="img" src="../img/ws2812b_2.png" />
+実際に回路CAD上でつないでみた図。最後のNeopixelのDOUTは未接続で問題ない。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="_11">フォトトランジスタ</h3>
+<p><img alt="img" src="https://akizukidenshi.com/img/goods/L/127315.jpg" />
+フォトトランジスタの画像をよく見ると、長い足と短い足がある。見た目がLEDと非常にそっくり。長い足を <strong>Corrector</strong> 、短い足を <strong>Emitter</strong> と呼ぶ。まあ、LEDと同じで順に +, - だと思ってもらって問題ない。
+<img alt="img" src="../img/phototransister.png" />
+回路CADでつないだ様子。電源として 3.3V を使用しているが、これはマイコンの電源電圧がが3.3V であるためであり、5Vのマイコンを使用している場合には5Vでも構わない。回路をよく見ると、Emitterと抵抗の間の配線名がL4となっていると思う。反射光の強度がここの電圧に反映されるので、ここをアナログ入力（デジタル入力でも良い）で監視する。（名前がL4であることに深い意味は無い。）以下のように複数作って、別々に監視してやるのが良い。
+<img alt="img" src="../img/phototransister2.png" /></p>
+<h3 id="_12">（補足）アナログマルチプレクサ</h3>
+<p>勢い余ってアナログマルチプレクサを紹介してしまったので解説します。
+<img alt="img" src="../img/cd74_1.png" />
+上の画像は<a href="https://www.ti.com/jp/lit/ds/symlink/cd74hc4067.pdf?ts=1730549281611">CD74HC4067のデータシート</a>に掲載されているピンマップです。</p>
+<ul>
+<li>Vcc<ul>
+<li>電源（3.3V or 5V）</li>
+</ul>
+</li>
+<li>COMMON INPUT/OUTPUT<ul>
+<li>COMピン</li>
+</ul>
+</li>
+<li>S<ul>
+<li>選択ピン</li>
+<li>何番の入力ピンが選択されるかは以下の式<ul>
+<li>S1 + 2 × S2 + 4 × S3 + 8 × S4</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>E<ul>
+<li>イネーブルピン</li>
+<li>CD74HC4067の場合、LOWにしておけば良い</li>
+<li>HIGHの場合、機能しない</li>
+<li>グラウンドにつないでおく</li>
+</ul>
+</li>
+<li>I<ul>
+<li>入力ピン
+<img alt="img" src="../img/cd74_2.png" />
+上の画像がデータシートをもとに回路CADで回路を書いてみたもの。特に言うことは無い。</li>
+</ul>
+</li>
+</ul>
+<h2 id="_13">プログラム</h2>
+<h3 id="_14">アナログマルチプレクサを使用しない場合</h3>
+<p>以下のようなコードを書いてあげれば良いと思います。Neopixelの光らせかたは自分で調べてください。難しくないので。わからなかったら聞いて。</p>
+<pre><code class="language-c++">#include &lt;Arduino.h&gt;
+
+const int LINESENSOR_NUM = 5; //フォトトランジスタの個数、こういうの大事
+const int LINESENSOR_PIN[LINESENSOR_NUM] = {A0, A1, A2, A3, A4}; //各センサのピン
+
+void setup() {
+    Serial.begin(115200) //シリアル通信を開始、デバッグ用
+}
+
+void loop() {
+    int sensorValues[LINESENSOR_NUM]; //結果を格納する配列
+    for (int i = 0; i &lt; LINESENSOR_NUM; i++) {
+        sensorValues[i] = analogRead(LINESENSOR_PIN[i]); //アナログ入力で読む
+    }
+
+    for (int i = 0; i &lt; LINESENSOR_NUM; i++) {
+        Serial.print(sensorValues[i]); //結果を出力、改行しない
+        Serial.print(&quot;\t&quot;); //値と値の間にtabを入れるとスペースと異なりきれいに出力できる
+    }
+    Serial.print(&quot;\n&quot;) //改行も忘れずに
+
+    delay(1000);
+}
+</code></pre>
+<p>各フォトトランジスタにスマホのLEDととかをかざしてみると値が変化すると思います。変化しなかったらなにか問題があると思います。コート上で白線上を行ったり来たりさせて値の変化を観察しましょう。ライン上にいるかどうかのしきい値はなんとなくで大丈夫だと思います。</p>
+<h3 id="_15">（補足）アナログマルチプレクサを使用する場合</h3>
+<pre><code class="language-c++">#include &lt;Arduino.h&gt;
+
+const int LINESENSOR_NUM = 16; //フォトトランジスタの個数、こういうの大事
+const int COM_PIN = A0; //COMピン
+const int SELECT_PIN[4] = {D5, D6, D7, D8} //選択ピン、番号は適当
+
+void setup() {
+    Serial.begin(115200) //シリアル通信を開始、デバッグ用
+
+    for (int i = 0; i &lt; 4; i++) {
+        pinMode(SELECT_PIN[i], OUTPUT);
+    }
+}
+
+void loop() {
+    int sensorValues[LINESENSOR_NUM]; //結果を格納する配列
+    for (int i = 0; i &lt; LINESENSOR_NUM; i++) {
+        for (int j = 0; j &lt; 4; j++) {
+            digitalWrite(SELECT_PIN[j], (i &gt;&gt; j) &amp; 1);
+        }
+        sensorValues[i] = analogRead(COM_PIN);
+    }
+
+    for (int i = 0; i &lt; LINESENSOR_NUM; i++) {
+        Serial.print(sensorValues[i]); //結果を出力、改行しない
+        Serial.print(&quot;\t&quot;); //値と値の間にtabを入れるとスペースと異なりきれいに出力できる
+    }
+    Serial.print(&quot;\n&quot;) //改行も忘れずに
+
+    delay(1000);
+}
+</code></pre>
+<p>ビット演算をうまく活用すると選択ピンの出力を簡単に変更できるのでおすすめです。アナログマルチプレクサを使うならある程度自分で何でもできないといけないと思うので特に解説しません。</p>
+<h2 id="_16">補足事項</h2>
+<p>色々補足があってごめんなさい。最後に<strong>エンジェルリング</strong>といういものを軽く紹介します。
+<img alt="img|354" src="https://cdn-ak.f.st-hatena.com/images/fotolife/r/robocup-zunda/20230504/20230504164310.jpg" />
+エンジェルリングとはラインセンサを円形に配置したものをさします。円形にラインセンサを配置することで、機体が踏んでいる白線の位置や角度を計算することができます。使い方によっては自己位置推定にも少しつながります。ただ、大量のラインセンサが必要となるのでアナログマルチプレクサは必須になると思いいます。加えて、コートの隅の角やゴールエリアの白線の角などでは処理がかなり難しくなります。この欠点を補うために機体の前後左右の端に独立したラインセンサを4つ付けて、それらとエンジェルリングを組み合わせてより高度なライン処理を行っているチームもあります。余裕があれば調べてみたりすると良いと思います。円形ボールセンサの計算方法も参考にできると思います。</p>
+<h4 id="_17">おすすめサイト</h4>
+<ul>
+<li><a href="https://rcjskycrew.livedoor.blog/archives/10745181.html">https://rcjskycrew.livedoor.blog/archives/10745181.html</a></li>
+<li><a href="http://blog.livedoor.jp/revolution_include/archives/2038835.html">http://blog.livedoor.jp/revolution_include/archives/2038835.html</a></li>
+<li><a href="https://yuta.techblog.jp/archives/24145402.html">https://yuta.techblog.jp/archives/24145402.html</a></li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../js/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

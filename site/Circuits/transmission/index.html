@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>通信方式 - ハードウェア開発 虎の巻</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">ハードウェア開発 虎の巻</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../../license/" class="nav-link">License</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Mechanics</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../prepare_now/" class="dropdown-item">準備中</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Circuits</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../before_developing/" class="dropdown-item">電子工作を始める前に</a>
+</li>
+                                    
+<li>
+    <a href="../signal/" class="dropdown-item">デジタル信号とアナログ信号</a>
+</li>
+                                    
+<li>
+    <a href="../microcomputer/" class="dropdown-item">マイコンのすゝめ</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">通信方式</a>
+</li>
+                                    
+<li>
+    <a href="../motor_driver/" class="dropdown-item">モータードライバ</a>
+</li>
+                                    
+<li>
+    <a href="../ball_sensor/" class="dropdown-item">ボールセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../line_sensor/" class="dropdown-item">ラインセンサ</a>
+</li>
+                                    
+<li>
+    <a href="../imu/" class="dropdown-item">IMU（ジャイロセンサなど）</a>
+</li>
+                                    
+<li>
+    <a href="../kicker/" class="dropdown-item">キッカー</a>
+</li>
+                                    
+<li>
+    <a href="../make_cable/" class="dropdown-item">ケーブル作成</a>
+</li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown"  aria-expanded="false">Program Intro</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../../Program-intro/about_c/" class="dropdown-item">C言語という言語について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/hello_world/" class="dropdown-item">Hello World!</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/variables_type/" class="dropdown-item">変数の宣言と型</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/operator/" class="dropdown-item">演算子について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/function/" class="dropdown-item">関数について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/array/" class="dropdown-item">配列について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/structure/" class="dropdown-item">構造体について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/pointer/" class="dropdown-item">ポインタについて</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/dynamic_memory/" class="dropdown-item">動的メモリ確保について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/library/" class="dropdown-item">ライブラリの読み込みについて</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/bit_operator/" class="dropdown-item">ビット演算について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/object_programing/" class="dropdown-item">オブジェクト指向概説</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/inheritance/" class="dropdown-item">継承について</a>
+</li>
+                                    
+<li>
+    <a href="../../Program-intro/composition/" class="dropdown-item">時代は継承より合成</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../microcomputer/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../motor_driver/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_1" class="nav-link">通信の概要</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link">各通信の回路</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="2"><a href="#arduino" class="nav-link">各通信をArduinoで利用する際のプログラムの書き方</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<p>著者：根岸孝次</p>
+<p>この資料では、Arduinoでよく使われる3つの通信方法（UART、I2C、SPI）について学びます。これを読めば、電子工作でマイコン同士の通信やセンサーとのやり取りを自分で実装できるようになります。</p>
+<h2 id="_1">通信の概要</h2>
+<h3 id="_2">何に使うのか？</h3>
+<p>通信は、複数のマイコン同士やセンサー、PCとArduinoの間で情報をやり取りするための手段です。通信は、以下のような用途に活用されます：</p>
+<ul>
+<li>マイコン同士の通信：複数のArduinoやマイコンボードが協力して動作する際に使われます。</li>
+<li>PCでのデバッグ：ArduinoとPCを接続し、動作確認やデータの送受信を行うときに使われます。</li>
+<li>センサとの通信：温度や加速度センサなどからデータを取得するために使われます。</li>
+</ul>
+<h3 id="_3">各通信の特徴</h3>
+<table>
+<thead>
+<tr>
+<th>通信方式</th>
+<th>使用例</th>
+<th>メリット</th>
+<th>デメリット</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UART（シリアル通信）</td>
+<td><strong>PCとのデバッグ</strong><br>ArduinoのSerial</td>
+<td>配線がTxとRxの2本で済む<br>プログラムが単純</td>
+<td>1:1の通信であるため複数デバイスと相性が悪い</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>センサ（6軸センサ、温度センサなど）</td>
+<td>複数デバイスを少ない信号線で管理できる</td>
+<td>通信速度が遅い<br></td>
+</tr>
+<tr>
+<td>SPI</td>
+<td>SDカード</td>
+<td>高速かつ多くのデバイスが接続可能</td>
+<td>2本の通信線（SCK, MISO, MOSI）に加えデバイス選択用の信号がデバイス数分必要になる</td>
+</tr>
+</tbody>
+</table>
+<h2 id="_4">各通信の回路</h2>
+<h3 id="uart">UART通信の回路</h3>
+<ul>
+<li>必要な信号線：Tx（送信）、Rx（受信）、<strong>GND</strong></li>
+<li>回路例：ArduinoのTxピンと相手のRxピン、ArduinoのRxピンと相手のTxピンを接続し、GND同士も接続します。<strong>TxとRxをクロスさせることが重要。</strong></li>
+</ul>
+<h3 id="i2c">I2C通信の回路</h3>
+<ul>
+<li>必要な信号線：SDA（データ）、SCL（クロック）、<strong>GND</strong></li>
+<li>回路例：ArduinoのSDAピンとI2CデバイスのSDAピン、SCLピンとI2CデバイスのSCLピンを接続します。複数デバイスを使う場合でもSDAとSCLを共通に接続し、GNDも全デバイスで共有します。</li>
+<li>各デバイスにはアドレスが割り振られている。通信の冒頭でアドレスを指定することでどのデバイスと通信を行うか選択できる。</li>
+<li>一般的にセンサのアドレスを変更することができるので、同じ製品であっても複数つなげることができる。</li>
+</ul>
+<h3 id="spi">SPI通信の回路</h3>
+<ul>
+<li>必要な信号線：MOSI（マスター出力/スレーブ入力）、MISO（マスター入力/スレーブ出力）、SCK（クロック）、SS（スレーブセレクト）、<strong>GND</strong></li>
+<li>回路例：ArduinoのMOSI、MISO、SCK、SSピンをそれぞれデバイスの対応ピンに接続します。SSピンを使って、どのデバイスが通信するかを指定できます。</li>
+<li>マスターとは通信を司る親のこと（基本的にマイコン）。スレーブとはマスターと通信したい各デバイス（センサなど）。</li>
+<li>マスターがSSピンを利用してどのデバイスと通信を行うかを指定した後、通信が開始される。</li>
+</ul>
+<h2 id="arduino">各通信をArduinoで利用する際のプログラムの書き方</h2>
+<p>各通信で必要となる最低限の関数の使い方などを解説します。</p>
+<h3 id="uart_1">UART</h3>
+<ul>
+<li>Serialクラス<ul>
+<li>シリアル通信に必要な関数などが揃っているクラス</li>
+<li>1つ1つのシリアル通信に対してインスタンスを作る必要がある。</li>
+<li>基本的にArduinoでは内部的にインスタンスが用意されている。<ul>
+<li>Serial, Serial1, Serial2 など</li>
+<li>どのインスタンスがどのtx,rxと結びついているかは事前に決まっている。ピン番号のところにTxN、RxN（N∈ℕ）と書いてあれば、基本的にSerialNとなる。USBを介してパソコンと接続されるシリアルはSerialとなる。</li>
+</ul>
+</li>
+<li>以後解説するすべての関数はメンバ関数であるので、"Serial.(関数名)"のように記述して利用する必要がある。</li>
+</ul>
+</li>
+<li>begin(<strong>ボーレート[bps]</strong>)<ul>
+<li>setup関数内で呼ぶのが一般的</li>
+<li>シリアル通信を指定のボーレート（通信速度）で開始する<ul>
+<li>一般的に 9600, 115200 などがボーレートとして使用される。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>print(<strong>送信したい内容</strong>)<ul>
+<li>通信相手にデータを送る。</li>
+<li>引数にはint型、float型、string型のいずれで送っても適切に送ってくれる。</li>
+<li>データは<strong>文字列</strong>として送られるので基本的にはPCとのデバッグ用で使われる。<ul>
+<li>私はPC以外とのシリアル通信で使ったことは1度も無い。</li>
+</ul>
+</li>
+<li>送られた文字列を改行するには自分で改行コード"\n"（"\r\n"）を加える必要がある。<ul>
+<li>面倒</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>println(<strong>送信したい内容</strong>)<ul>
+<li>ほぼprint関数と一緒。</li>
+<li><strong>送る文字列の最後に改行コード"\n"（"\r\n"）を付け加えて送信してくれる。</strong></li>
+<li>デバッグでは専らこっちを利用する。</li>
+</ul>
+</li>
+<li>write(<strong>送信したい内容（8bit/1バイト）</strong>)<ul>
+<li><strong>1バイトのデータをそのまま送ってくれる</strong><ul>
+<li>0~255の整数</li>
+<li>print関数とは異なり文字列に変換されない</li>
+<li>マイコン同士の通信に有用</li>
+</ul>
+</li>
+<li>1バイトしか送れない<ul>
+<li>int型、float型などは32bit、double型は64bitなのでこの関数で送ろうとするとあふれる</li>
+<li>遅れる情報が少ないので、元データを圧縮するか分割する必要がある。<ul>
+<li>分割する際にはビット演算が有用。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>wirte(<strong>送信したい内容の配列（1バイトのデータの配列), 送信するバイト数</strong>)<ul>
+<li>上述のwrite関数の上位互換<ul>
+<li>複数バイト送信できるので便利</li>
+</ul>
+</li>
+<li>送信したい内容を1バイト事に分割して、配列に格納すれば一気に送れる</li>
+</ul>
+</li>
+<li>read()<ul>
+<li>受信したデータを読み出す</li>
+<li>バッファの先頭1バイトしか読み出さない<ul>
+<li>受信したデータはバッファに貯められている。受信が多すぎるとバッファが溢れて、古いデータが捨てられてしまう</li>
+<li>for文と組み合わせて複数バイトを読み出す</li>
+</ul>
+</li>
+<li>受け取ったデータをそのまま返してくれる<ul>
+<li>文字列などに変換はしてくれない</li>
+<li>write関数で0~255で整数を送って、read関数で読み出せばそのままの数字を得られ</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="i2c_1">I2C</h3>
+<ul>
+<li><strong>"Wire.h"をインクルードする</strong></li>
+<li>Wireクラス<ul>
+<li>UARTのSerialと同様</li>
+</ul>
+</li>
+<li>begin()<ul>
+<li>通信を開始する</li>
+<li>setup関数で呼び出せば良い</li>
+</ul>
+</li>
+<li>beginTransmission(<strong>アドレス(16進数/8bit)</strong>)<ul>
+<li>特定のデバイスとのセッションを開始<ul>
+<li>対象デバイスのアドレスを16進数で指定する</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>write(<strong>送信したい内容(16進数/8bit)</strong>)<ul>
+<li>引数に与えたデータをそのまま送信</li>
+<li>16進数の形で表記することがほとんど</li>
+</ul>
+</li>
+<li>endTransmission()<ul>
+<li>現在行っているセッションを終了<ul>
+<li>I2C通信を終了するわけではない</li>
+<li>特定のデバイスとのセッションを終えるだけ</li>
+<li>これを行わないと次のデバイスとの通信ができない</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="spi_1">SPI</h3>
+<ul>
+<li><strong>"SPI.h"をインクルードする</strong></li>
+<li>SPIクラス<ul>
+<li>UARTのSerialと同様</li>
+</ul>
+</li>
+<li>begin()<ul>
+<li>通信を開始する</li>
+<li>setup関数で呼び出せば良い</li>
+</ul>
+</li>
+<li><strong>すべてのSSピンをHIGHにする</strong><ul>
+<li>スレーブデバイスはSSピンがHIGHであると通信を行わない</li>
+</ul>
+</li>
+<li>transfer(<strong>送信したい内容(16進数/8bit)</strong>)<ul>
+<li>引数に与えたデータをそのまま送信</li>
+<li>16進数の形で表記することがほとんど</li>
+<li>送信と受信の両方を兼ねる</li>
+<li>返り値として受信データを取得できる<ul>
+<li>受信だけをしたいときにも何かしらデータを送る必要がある。0x00などを送ることが多い。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>通信相手の選択の仕方</strong><ul>
+<li><strong>特定のデバイスのSSピンだけをLOWにする</strong></li>
+<li><strong>セッションを終える時に必ずHIGHに戻す</strong></li>
+</ul>
+</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../js/mathjax.js"></script>
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
