@@ -1,0 +1,40 @@
+site_name: ハードウェア開発 虎の巻
+nav:
+  - Home: index.md
+  - License: license.md
+  - Mechanics:
+    - 準備中: prepare_now.md
+  - Circuits:
+    - 電子工作を始める前に: Circuits/before_developing.md
+    - デジタル信号とアナログ信号: Circuits/signal.md
+    - マイコンのすゝめ: Circuits/microcomputer.md
+    - 通信方式: Circuits/transmission.md
+    - モータードライバ: Circuits/motor_driver.md
+    - ボールセンサ: Circuits/ball_sensor.md
+    - ラインセンサ: Circuits/line_sensor.md
+    - IMU（ジャイロセンサなど）: Circuits/imu.md
+    - キッカー: Circuits/kicker.md
+    - ケーブル作成: Circuits/make_cable.md
+  - Program Intro:
+    - 1. Hello World!: Program-intro/1.Hello_World.md
+    - 2. 変数の宣言と型: Program-intro/variables_type.md
+    - 3. 演算子について: Program-intro/operator.md
+    - 4. 関数について: Program-intro/function.md
+    - 5. 配列について: Program-intro/array.md
+    - 6. 構造体について: Program-intro/structure.md
+    - 7. ポインタについて: Program-intro/pointer.md
+    - 8. 動的メモリ確保について: Program-intro/dynamic_memory.md
+    - 9. ライブラリの読み込みについて: Program-intro/library.md
+    - 10. ビット演算について: Program-intro/bit_operator.md
+    - 11. オブジェクト指向概説: Program-intro/object_programing.md
+    - 12. 継承について: Program-intro/inheritance.md
+    - 13. 時代は継承より合成: Program-intro/composition.md
+
+extra_javascript: 
+  - js/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
