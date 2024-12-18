@@ -1,4 +1,4 @@
-site_name: ハードウェア開発 虎の巻
+site_name: ハードウェア開発資料
 nav:
   - Home: index.md
   - License: license.md
