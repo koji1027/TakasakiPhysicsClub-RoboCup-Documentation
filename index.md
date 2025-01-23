@@ -26,6 +26,7 @@
 - [ラインセンサ解説](Circuits/line_sensor.md)
 - [IMU 解説](Circuits/imu.md)
 - [キッカー解説](Circuits/kicker.md)
+- [Pololu G2ハイパワーモータードライバーの使い方](Circuits/pololu_g2.md)
 
 ### 制御
 
