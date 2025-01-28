@@ -31,8 +31,8 @@ nav:
           - 11. オブジェクト指向概説: Program-intro/object_programing.md
           - 12. 継承について: Program-intro/inheritance.md
           - 13. 時代は継承より合成: Program-intro/composition.md
-  - 実践編:
-      - 姿勢制御: Program-practice/posture_control.md
+      - 実践編:
+          - 姿勢制御: Program-practice/posture_control.md
 
 extra_javascript:
   - js/mathjax.js
