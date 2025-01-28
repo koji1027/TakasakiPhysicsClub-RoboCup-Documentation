@@ -29,8 +29,13 @@
 - [Pololu G2ハイパワーモータードライバーの使い方](Circuits/pololu_g2.md)
 
 ### 制御
+#### 基本編
+- [1 Hello World!](Program-intro/1.Hello_World.md)
+- [2 変数の宣言と型](Program-intro/2.変数の宣言と型.md)
+- [3 演算子](Program-intro/3.演算子.md)
 
-- 鋭意執筆中
+#### 実践編
+- [姿勢制御](Program-intro/posture_control.md)
 
 ### C/C++入門(補助資料として軽く読んでみるといいかもしれない)
 
