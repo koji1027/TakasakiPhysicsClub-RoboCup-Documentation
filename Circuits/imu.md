@@ -83,6 +83,25 @@ $$
 
 最低限ドリフトの補正はやる必要があります。スケールファクター誤差は必要に応じてやってください。ロボットの電源を付けたら毎回これらの補正をやるのが理想ですが、手間なので定期的にやると良いと思います。
 
-## センサフージョンについて
-ジャイロスコープ、加速度計、磁力計のそれぞれの特徴について軽く解説しました。ロボカップジュニアサッカーではジャイロスコープが有力です。しかし、ジャイロスコープ単体では蓄積していく誤差を補正することができません。そこで、2つ（もしくは3つ）のセンサからの値をあわせて利用する技術があります。
+実際の姿勢制御のやり方については、制御に関する[姿勢制御の資料](../Program-intro/posture_control.md)を参照してください。
 
+## おすすめのIMU
+- [MPU-6050](https://www.amazon.co.jp/Youmile4%E5%80%8B-MMA8452%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB-3%E8%BB%B8%E5%8A%A0%E9%80%9F%E5%BA%A6%E3%82%BB%E3%83%B3%E3%82%B5%E3%83%BC-%E3%83%87%E3%82%B8%E3%82%BF%E3%83%AB3%E8%BB%B8%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB-%E5%82%BE%E6%96%9C%E3%83%A2%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/dp/B09PH2ZB95?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=3CR5FAQ4INZJS&dib=eyJ2IjoiMSJ9.x-Ob_vMIwf8NyxJWp0A7PokVWV-E7lWEkmvrbNd2KrhxXOTFk-MLGtcwZgOJ4oFKjeGJXNLLoAARY3vnZPiBnofKxO-x4-qlgvQIQ6lOCfphQ0twBWa6seEgkJ68osZpMjJS6OH-lz_58jdot4qx1JAtBFQ64s6FI81swuPGwmxN_gQ3QD02i3AsSFesrFS5GoE5tv71BDNFep1LDBjOvzpakXGFT02UeTBz8K6-oE6e-4jI7gz1jQGsQlhpDYfTbt2eSluncGpy0S8_rsmavbQPEnvk1XwO1fQV0OmSqEvLPnr2CDmDMUGJha7H-Ty0vc2VOaXQBHddEaOVtrPBZm4ZF5iLkTstEHUTXWYN_oBJaUFU0BnOP3qJygCIMMDgfDuUBnHkz02_zxV0dvX8ZUP_NDN6N5NWgJ4x4XH9fdKd6PO1KMU1KTd1MOgEUipT.imh5wEuZn_LAmOvNkcbnMTZPzu5wiz5gczVJVY4sTvw&dib_tag=se&keywords=mpu6500&qid=1738038621&sprefix=mpu+6500%2Caps%2C158&sr=8-4)
+		![img](https://user-images.githubusercontent.com/107638696/241324971-43b8fe88-447d-4c2d-9296-4b3aaa50f4ce.png)
+	- ロボカップで最もメジャーかも知れない6軸IMU(加速度・ジャイロ)
+	- DMPという機能があり、専用のライブラリを使うことで、内部的にオイラー角やクォータニオンを算出してくれる。
+	- **メーカー的には新規に使用することは推奨されていない。ICM-42670-Pを代替として使うよう促している。**
+- 自作IMU
+		![img](https://storage.googleapis.com/zenn-user-upload/99dcc60051a2-20241201.jpg)
+	- 自分で作ればほしいスペックやサイズを実現できる。
+	- [私も自作しています。](https://zenn.dev/negi_robo/articles/a7cc185620edae)欲しい場合には言ってもらえれば譲ります。
+	- 信頼性のテストとかもしたいので使ってくれると喜びます。
+	- かなり小型で高性能なのでおすすめです。
+	- IMUセンサを幅広く手掛けているTDKというメーカーの中でも高性能なやつを選んだつもりです。
+	- 内部的に計算する機能はありませんが、モーションジェスチャーには対応しているようです。
+- [BNO055](https://akizukidenshi.com/catalog/g/g116996/)
+		![img](https://akizukidenshi.com/img/goods/L/116996.jpg)
+	- 秋月で購入できる高性能IMU
+	- 9軸(加速度・ジャイロ・地磁気)
+	- 内部でオイラー角やクォータニオンを計算してくれる。3種類のセンサーの値を統合してくれるので精度が高い。
+	- ほかよりも高価。
